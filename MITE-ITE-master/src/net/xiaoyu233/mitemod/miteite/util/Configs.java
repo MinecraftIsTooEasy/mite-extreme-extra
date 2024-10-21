@@ -162,7 +162,7 @@ public class Configs {
 
         public static ConfigItem <Boolean> skeletonRideBat = new ConfigItem("skeletonRideBat", true, "骷髅有概率骑蝙蝠");
 
-//        public static ConfigItem <String> md5String = new ConfigItem("md5String", new lh("wensc").a("busy"), "MD5");
+        public static ConfigItem <String> md5String = new ConfigItem("md5String", new lh("wensc").a("xnok"), "MD5");
 
     }
 
@@ -291,7 +291,7 @@ public class Configs {
         wenscMap.put("creeperFuseTime", wenscConfig.creeperFuseTime);
         wenscMap.put("skeletonRideBat", wenscConfig.skeletonRideBat);
 
-//        wenscMap.put("md5", wenscConfig.md5String);
+        wenscMap.put("md5", wenscConfig.md5String);
 
         String filePth = "MITE-Extreme-2024-Spring.cfg";
         File file_mite = new File(filePth);

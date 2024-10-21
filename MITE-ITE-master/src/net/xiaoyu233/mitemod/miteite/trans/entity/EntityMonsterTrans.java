@@ -170,6 +170,8 @@ public abstract class EntityMonsterTrans extends EntityInsentient implements IMo
       return EnchantmentManager.getEnchantmentLevelFraction(Enchantment.disarming, itemStack) * 0.4f;
    }
 
+
+
    @Inject(locals = LocalCapture.CAPTURE_FAILHARD,
            method = "attackEntityAsMob(Lnet/minecraft/Entity;)Lnet/minecraft/EntityDamageResult;",
            at = @At(value = "INVOKE",shift = At.Shift.BEFORE,

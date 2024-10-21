@@ -22,7 +22,7 @@ public class Enchantments {
     public static final Enchantment enchantmentChain = new EnchantmentChain(getNextEnchantmentID(), yq.d,30);
     public static List<Enchantment> individualEnchantments = new ArrayList<>();
     public static void registerEnchantments(){
-        Enchantments.registerEnchantmentsUnsafe(enchantmentFixed, CRIT, EXTEND, EMERGENCY, CONQUEROR, BEHEADING, enchantmentChain);
+        Enchantments.registerEnchantmentsUnsafe(CRIT, EXTEND, EMERGENCY, CONQUEROR, BEHEADING, enchantmentFixed, enchantmentChain);
     }
 
     public static void registerEnchantmentsUnsafe(Enchantment... enchantments) {
