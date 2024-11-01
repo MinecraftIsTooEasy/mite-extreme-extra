@@ -60,7 +60,7 @@ public class Blocks extends Block{
     public static final Block blockStairsColorful14 = new BlockStairsColorful(190, blockColorful, 14);
     public static final Block blockStairsColorful15 = new BlockStairsColorful(191, blockColorful, 15);
 
-    public static final BlockSpawn blockSpawn = (new BlockSpawn(192, Material.stone));
+//    public static final BlockSpawn blockSpawn = (new BlockSpawn(192, Material.stone));
 
     public static final Block fancyRed = (new BlockFancyRed(193, Material.diamond, 4)).setCreativeTab(CreativeModeTab.tabBlock);
 
@@ -142,7 +142,7 @@ public class Blocks extends Block{
         registerItemBlock(chestVibranium,"vibranium_chest");
 
         registerItemBlock(blockGotcha, "gotcha");
-        registerItemBlock(blockSpawn, "block_spawn");
+//        registerItemBlock(blockSpawn, "block_spawn");
         registerItemBlock(fancyRed, "fancy_red");
         registerItemBlock(gemSetting, "gem_setting");
 
@@ -235,13 +235,13 @@ public class Blocks extends Block{
         register.registerShapelessRecipe(new ItemStack(blockColorful, 9, 0), true, new ItemStack(blockColorful, 9, 15));
         register.registerShapelessRecipe(new ItemStack(blockColorfulBrick, 9, 0), true, new ItemStack(blockColorfulBrick, 9, 15));
 
-        register.registerShapedRecipe(new ItemStack(blockSpawn), true,
-                "ABA",
-                "BCB",
-                "ABA",
-                'A', Blocks.obsidian,
-                'B', Items.diamond,
-                'C', Items.enderPearl);
+//        register.registerShapedRecipe(new ItemStack(blockSpawn), true,
+//                "ABA",
+//                "BCB",
+//                "ABA",
+//                'A', Blocks.obsidian,
+//                'B', Items.diamond,
+//                'C', Items.enderPearl);
         register.registerShapedRecipe(new ItemStack(anvilVibranium),true,
                 "AVA",
                 " I ",

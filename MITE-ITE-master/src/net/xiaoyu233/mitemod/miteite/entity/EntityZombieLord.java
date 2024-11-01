@@ -44,7 +44,7 @@ public class EntityZombieLord extends EntityZombie {
     @Override
     protected void dropFewItems(boolean recently_hit_by_player, DamageSource damage_source) {
         if (recently_hit_by_player){
-            this.dropItem(Items.voucherZombieLord);
+//            this.dropItem(Items.voucherZombieLord);
             int day = this.getWorld().getDayOfOverworld();
             int diamond_count = (day / 32) >= 3 ? 3 : ((day / 32) + 1);
             for (int i1 = 0; i1 < diamond_count; i1++) {
@@ -68,23 +68,23 @@ public class EntityZombieLord extends EntityZombie {
                 this.fx_counter = 60;
                 this.entityFX(EnumEntityFX.summoned);
             }
-            if(Configs.wenscConfig.isSpawnExchanger.ConfigValue) {
-                EntityLiving target = this.getAttackTarget();
-                if(target instanceof EntityPlayer) {
-                    if(!haveTryToSpawnExchanger) {
-                        if(rand.nextInt(20) == 0) {
-                            EntityExchanger entityExchanger = new EntityExchanger(this.worldObj);
-                            entityExchanger.setPosition(this.posX, this.posY, this.posZ);
-                            entityExchanger.refreshDespawnCounter(-9600);
-                            this.worldObj.spawnEntityInWorld(entityExchanger);
-                            entityExchanger.onSpawnWithEgg(null);
-                            entityExchanger.setAttackTarget(this.getTarget());
-                            entityExchanger.entityFX(EnumEntityFX.summoned);
-                        }
-                        this.haveTryToSpawnExchanger = true;
-                    }
-                }
-            }
+//            if(Configs.wenscConfig.isSpawnExchanger.ConfigValue) {
+//                EntityLiving target = this.getAttackTarget();
+//                if(target instanceof EntityPlayer) {
+//                    if(!haveTryToSpawnExchanger) {
+//                        if(rand.nextInt(20) == 0) {
+//                            EntityExchanger entityExchanger = new EntityExchanger(this.worldObj);
+//                            entityExchanger.setPosition(this.posX, this.posY, this.posZ);
+//                            entityExchanger.refreshDespawnCounter(-9600);
+//                            this.worldObj.spawnEntityInWorld(entityExchanger);
+//                            entityExchanger.onSpawnWithEgg(null);
+//                            entityExchanger.setAttackTarget(this.getTarget());
+//                            entityExchanger.entityFX(EnumEntityFX.summoned);
+//                        }
+//                        this.haveTryToSpawnExchanger = true;
+//                    }
+//                }
+//            }
         }
     }
 }

@@ -91,25 +91,25 @@ public class EntityAnnihilationSkeleton extends EntitySkeleton {
             this.generateRandomParticles(EnumParticle.largesmoke);
             this.generateRandomParticles(EnumParticle.largesmoke);
         }
-        if(Configs.wenscConfig.isSpawnExchanger.ConfigValue) {
-            if (!this.getWorld().isRemote) {
-                EntityLiving target = this.getAttackTarget();
-                if (target instanceof EntityPlayer) {
-                    if (!haveTryToSpawnExchanger) {
-                        if (rand.nextInt(50) == 0) {
-                            EntityExchanger entityExchanger = new EntityExchanger(this.worldObj);
-                            entityExchanger.setPosition(this.posX, this.posY, this.posZ);
-                            entityExchanger.refreshDespawnCounter(-9600);
-                            this.worldObj.spawnEntityInWorld(entityExchanger);
-                            entityExchanger.onSpawnWithEgg(null);
-                            entityExchanger.setAttackTarget(this.getTarget());
-                            entityExchanger.entityFX(EnumEntityFX.summoned);
-                        }
-                        this.haveTryToSpawnExchanger = true;
-                    }
-                }
-            }
-        }
+//        if(Configs.wenscConfig.isSpawnExchanger.ConfigValue) {
+//            if (!this.getWorld().isRemote) {
+//                EntityLiving target = this.getAttackTarget();
+//                if (target instanceof EntityPlayer) {
+//                    if (!haveTryToSpawnExchanger) {
+//                        if (rand.nextInt(50) == 0) {
+//                            EntityExchanger entityExchanger = new EntityExchanger(this.worldObj);
+//                            entityExchanger.setPosition(this.posX, this.posY, this.posZ);
+//                            entityExchanger.refreshDespawnCounter(-9600);
+//                            this.worldObj.spawnEntityInWorld(entityExchanger);
+//                            entityExchanger.onSpawnWithEgg(null);
+//                            entityExchanger.setAttackTarget(this.getTarget());
+//                            entityExchanger.entityFX(EnumEntityFX.summoned);
+//                        }
+//                        this.haveTryToSpawnExchanger = true;
+//                    }
+//                }
+//            }
+//        }
     }
 
     @Override
@@ -175,7 +175,7 @@ public class EntityAnnihilationSkeleton extends EntitySkeleton {
     @Override
     protected void dropFewItems(boolean recently_hit_by_player, DamageSource damage_source) {
         if (recently_hit_by_player){
-            this.dropItem(Items.voucherAnnihilationSkeleton);
+//            this.dropItem(Items.voucherAnnihilationSkeleton);
             this.dropItemStack(new ItemStack(Items.VIBRANIUM_NUGGET,2));
             this.dropItemStack(new ItemStack(Item.diamond,2));
         }

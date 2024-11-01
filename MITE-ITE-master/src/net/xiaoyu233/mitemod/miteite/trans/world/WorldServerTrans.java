@@ -156,9 +156,9 @@ public abstract class WorldServerTrans extends World {
                return entity_class;
             }
          } else {
-            if (entity_class == EntityExchanger.class && Configs.wenscConfig.isSpawnExchanger.ConfigValue) {
-               return entity_class;
-            }
+//            if (entity_class == EntityExchanger.class && Configs.wenscConfig.isSpawnExchanger.ConfigValue) {
+//               return entity_class;
+//            }
             if (entity_class == EntityMirrorSkeleton.class) {
                return entity_class;
             }

@@ -44,32 +44,32 @@ public class Items extends Item{
     public static final Item clubAdamantium = new ItemClubMetal(Constant.getNextItemID(), Material.adamantium);
     public static final Item clubVibranium = new ItemClubMetal(Constant.getNextItemID(), Materials.vibranium);
 
-    public static final Item ringKillerCopper = new ItemRingKiller(Constant.getNextItemID(), Materials.copper).setUnlocalizedName("ringKillerCopper");
-    public static final Item ringKillerIron = new ItemRingKiller(Constant.getNextItemID(), Materials.iron).setUnlocalizedName("ringKillerIron");
-    public static final Item ringKillerAncient = new ItemRingKiller(Constant.getNextItemID(), Materials.ancient_metal).setUnlocalizedName("ringKillerAncient");
-    public static final Item ringKillerMithril = new ItemRingKiller(Constant.getNextItemID(), Materials.mithril).setUnlocalizedName("ringKillerMithril");
-    public static final Item ringKillerAdamantium = new ItemRingKiller(Constant.getNextItemID(), Materials.adamantium).setUnlocalizedName("ringKillerAdamantium");
-    public static final Item ringKillerVibranium = new ItemRingKiller(Constant.getNextItemID(), Materials.vibranium).setUnlocalizedName("ringKillerVibranium");
+//    public static final Item ringKillerCopper = new ItemRingKiller(Constant.getNextItemID(), Materials.copper).setUnlocalizedName("ringKillerCopper");
+//    public static final Item ringKillerIron = new ItemRingKiller(Constant.getNextItemID(), Materials.iron).setUnlocalizedName("ringKillerIron");
+//    public static final Item ringKillerAncient = new ItemRingKiller(Constant.getNextItemID(), Materials.ancient_metal).setUnlocalizedName("ringKillerAncient");
+//    public static final Item ringKillerMithril = new ItemRingKiller(Constant.getNextItemID(), Materials.mithril).setUnlocalizedName("ringKillerMithril");
+//    public static final Item ringKillerAdamantium = new ItemRingKiller(Constant.getNextItemID(), Materials.adamantium).setUnlocalizedName("ringKillerAdamantium");
+//    public static final Item ringKillerVibranium = new ItemRingKiller(Constant.getNextItemID(), Materials.vibranium).setUnlocalizedName("ringKillerVibranium");
     public static final Item Stack_Torch = createInstance(Item.class, new Class[]{int.class, Material.class, String.class}, Constant.getNextItemID(), Material.circuits, "stack_torch");
 
-    public static final Item voucherExchanger = new ItemMobVoucher(Constant.getNextItemID(), "exchanger");
-    public static final Item voucherDoor = new ItemMobVoucher(Constant.getNextItemID(), "door");
-    public static final Item voucherZombieLord = new ItemMobVoucher(Constant.getNextItemID(), "zombie_lord");
-    public static final Item voucherAnnihilationSkeleton = new ItemMobVoucher(Constant.getNextItemID(), "annihilation_skeleton");
-    public static final Item voucherPigman = new ItemMobVoucher(Constant.getNextItemID(), "pigman");
-    public static final Item voucherWitch = new ItemMobVoucher(Constant.getNextItemID(), "witch");
-    public static final Item voucherCore = new ItemMobVoucher(Constant.getNextItemID(), "core");
+//    public static final Item voucherExchanger = new ItemMobVoucher(Constant.getNextItemID(), "exchanger");
+//    public static final Item voucherDoor = new ItemMobVoucher(Constant.getNextItemID(), "door");
+//    public static final Item voucherZombieLord = new ItemMobVoucher(Constant.getNextItemID(), "zombie_lord");
+//    public static final Item voucherAnnihilationSkeleton = new ItemMobVoucher(Constant.getNextItemID(), "annihilation_skeleton");
+//    public static final Item voucherPigman = new ItemMobVoucher(Constant.getNextItemID(), "pigman");
+//    public static final Item voucherWitch = new ItemMobVoucher(Constant.getNextItemID(), "witch");
+//    public static final Item voucherCore = new ItemMobVoucher(Constant.getNextItemID(), "core");
     public static final Item voucherFishing = new ItemMobVoucher(Constant.getNextItemID(), "fishing");
     public static final Item voucherPlanting = new ItemMobVoucher(Constant.getNextItemID(), "planting");
     public static final Item voucherVillager = new ItemMobVoucher(Constant.getNextItemID(), "villager");
     public static final Item voucherClubCore = new ItemMobVoucher(Constant.getNextItemID(), "club_core");
 
-    public static final Item itemDynamicCoreIron = new ItemDynamicCore(Constant.getNextItemID(), Materials.iron, 1).setUnlocalizedName("dynamic_core_iron");
-    public static final Item itemDynamicCoreAncient_metal = new ItemDynamicCore(Constant.getNextItemID(), Materials.ancient_metal, 2).setUnlocalizedName("dynamic_core_ancient_metal");
-    public static final Item itemDynamicCoreMithril = new ItemDynamicCore(Constant.getNextItemID(), Materials.mithril, 3).setUnlocalizedName("dynamic_core_mithril");
-
-    public static final Item itemDynamicCoreAdamantium = new ItemDynamicCore(Constant.getNextItemID(), Materials.adamantium, 4).setUnlocalizedName("dynamic_core_adamantium");
-    public static final Item itemDynamicCoreVibranium = new ItemDynamicCore(Constant.getNextItemID(), Materials.vibranium, 5).setUnlocalizedName("dynamic_core_vibranium");
+//    public static final Item itemDynamicCoreIron = new ItemDynamicCore(Constant.getNextItemID(), Materials.iron, 1).setUnlocalizedName("dynamic_core_iron");
+//    public static final Item itemDynamicCoreAncient_metal = new ItemDynamicCore(Constant.getNextItemID(), Materials.ancient_metal, 2).setUnlocalizedName("dynamic_core_ancient_metal");
+//    public static final Item itemDynamicCoreMithril = new ItemDynamicCore(Constant.getNextItemID(), Materials.mithril, 3).setUnlocalizedName("dynamic_core_mithril");
+//
+//    public static final Item itemDynamicCoreAdamantium = new ItemDynamicCore(Constant.getNextItemID(), Materials.adamantium, 4).setUnlocalizedName("dynamic_core_adamantium");
+//    public static final Item itemDynamicCoreVibranium = new ItemDynamicCore(Constant.getNextItemID(), Materials.vibranium, 5).setUnlocalizedName("dynamic_core_vibranium");
     public static final Item fancyRed = (new ItemFancyRed(Constant.getNextItemID(), Material.diamond, "fancy_red"));
 
     public static ItemEnhanceGem itemEnhanceGem = (ItemEnhanceGem)(new ItemEnhanceGem(Constant.getNextItemID(), 1)).setUnlocalizedName("enhance_gem_phase1");
@@ -131,30 +131,30 @@ public class Items extends Item{
         register("stack_torch", Stack_Torch).setUnlocalizedName("stack_torch").setMaxStackSize(64).setCraftingDifficultyAsComponent(1.0E-9F);
 
         register("lava_in_pipes", lavaInPipes).setUnlocalizedName("lava_in_pipes").setLowestCraftingDifficultyToProduce(1.0F);
-        register("ring_killer/ring_killer_copper", ringKillerCopper).setUnlocalizedName("ring_killer_copper").setLowestCraftingDifficultyToProduce(1.0F);
-        register("ring_killer/ring_killer_iron", ringKillerIron).setUnlocalizedName("ring_killer_iron").setLowestCraftingDifficultyToProduce(1.0F);
-        register("ring_killer/ring_killer_ancient", ringKillerAncient).setUnlocalizedName("ring_killer_ancient").setLowestCraftingDifficultyToProduce(1.0F);
-        register("ring_killer/ring_killer_mithril", ringKillerMithril).setUnlocalizedName("ring_killer_mithril").setLowestCraftingDifficultyToProduce(1.0F);
-        register("ring_killer/ring_killer_adamantium", ringKillerAdamantium).setUnlocalizedName("ring_killer_adamantium").setLowestCraftingDifficultyToProduce(1.0F);
-        register("ring_killer/ring_killer_vibranium", ringKillerVibranium).setUnlocalizedName("ring_killer_vibranium").setLowestCraftingDifficultyToProduce(1.0F);
-
-        register("voucher/voucher_exchanger", voucherExchanger).setUnlocalizedName("voucher_exchanger").setLowestCraftingDifficultyToProduce(1.0F);
-        register("voucher/voucher_door", voucherDoor).setUnlocalizedName("voucher_door").setLowestCraftingDifficultyToProduce(1.0F);
-        register("voucher/voucher_zombie_lord", voucherZombieLord).setUnlocalizedName("voucher_zombie_lord").setLowestCraftingDifficultyToProduce(1.0F);
-        register("voucher/voucher_annihilation_skeleton", voucherAnnihilationSkeleton).setUnlocalizedName("voucher_annihilation_skeleton").setLowestCraftingDifficultyToProduce(1.0F);
-        register("voucher/voucher_pigman", voucherPigman).setUnlocalizedName("voucher_pigman").setLowestCraftingDifficultyToProduce(1.0F);
-        register("voucher/voucher_witch", voucherWitch).setUnlocalizedName("voucher_witch").setLowestCraftingDifficultyToProduce(1.0F);
-        register("voucher/voucher_core", voucherCore).setUnlocalizedName("voucher_core").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("ring_killer/ring_killer_copper", ringKillerCopper).setUnlocalizedName("ring_killer_copper").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("ring_killer/ring_killer_iron", ringKillerIron).setUnlocalizedName("ring_killer_iron").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("ring_killer/ring_killer_ancient", ringKillerAncient).setUnlocalizedName("ring_killer_ancient").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("ring_killer/ring_killer_mithril", ringKillerMithril).setUnlocalizedName("ring_killer_mithril").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("ring_killer/ring_killer_adamantium", ringKillerAdamantium).setUnlocalizedName("ring_killer_adamantium").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("ring_killer/ring_killer_vibranium", ringKillerVibranium).setUnlocalizedName("ring_killer_vibranium").setLowestCraftingDifficultyToProduce(1.0F);
+//
+//        register("voucher/voucher_exchanger", voucherExchanger).setUnlocalizedName("voucher_exchanger").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("voucher/voucher_door", voucherDoor).setUnlocalizedName("voucher_door").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("voucher/voucher_zombie_lord", voucherZombieLord).setUnlocalizedName("voucher_zombie_lord").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("voucher/voucher_annihilation_skeleton", voucherAnnihilationSkeleton).setUnlocalizedName("voucher_annihilation_skeleton").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("voucher/voucher_pigman", voucherPigman).setUnlocalizedName("voucher_pigman").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("voucher/voucher_witch", voucherWitch).setUnlocalizedName("voucher_witch").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("voucher/voucher_core", voucherCore).setUnlocalizedName("voucher_core").setLowestCraftingDifficultyToProduce(1.0F);
         register("voucher/voucher_fishing", voucherFishing).setUnlocalizedName("voucher_fishing").setLowestCraftingDifficultyToProduce(1.0F);
         register("voucher/voucher_planting", voucherPlanting).setUnlocalizedName("voucher_planting").setLowestCraftingDifficultyToProduce(1.0F);
         register("voucher/voucher_villager", voucherVillager).setUnlocalizedName("voucher_villager").setLowestCraftingDifficultyToProduce(1.0F);
         register("voucher/voucher_club_core", voucherClubCore).setUnlocalizedName("voucher_club_core").setLowestCraftingDifficultyToProduce(1.0F);
 
-        register("dynamic_core/dynamic_core_1", itemDynamicCoreIron).setUnlocalizedName("dynamic_core_iron").setLowestCraftingDifficultyToProduce(1.0F);
-        register("dynamic_core/dynamic_core_2", itemDynamicCoreAncient_metal).setUnlocalizedName("dynamic_core_ancient_metal").setLowestCraftingDifficultyToProduce(1.0F);
-        register("dynamic_core/dynamic_core_3", itemDynamicCoreMithril).setUnlocalizedName("dynamic_core_mithril").setLowestCraftingDifficultyToProduce(1.0F);
-        register("dynamic_core/dynamic_core_4", itemDynamicCoreAdamantium).setUnlocalizedName("dynamic_core_adamantium").setLowestCraftingDifficultyToProduce(1.0F);
-        register("dynamic_core/dynamic_core_5", itemDynamicCoreVibranium).setUnlocalizedName("dynamic_core_vibranium").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("dynamic_core/dynamic_core_1", itemDynamicCoreIron).setUnlocalizedName("dynamic_core_iron").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("dynamic_core/dynamic_core_2", itemDynamicCoreAncient_metal).setUnlocalizedName("dynamic_core_ancient_metal").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("dynamic_core/dynamic_core_3", itemDynamicCoreMithril).setUnlocalizedName("dynamic_core_mithril").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("dynamic_core/dynamic_core_4", itemDynamicCoreAdamantium).setUnlocalizedName("dynamic_core_adamantium").setLowestCraftingDifficultyToProduce(1.0F);
+//        register("dynamic_core/dynamic_core_5", itemDynamicCoreVibranium).setUnlocalizedName("dynamic_core_vibranium").setLowestCraftingDifficultyToProduce(1.0F);
 
         register("fancy_red", fancyRed).setUnlocalizedName("fancy_red").setLowestCraftingDifficultyToProduce(1.0F);
         register("gem/enhance_gem_phase1", itemEnhanceGem).setUnlocalizedName("enhance_gem_phase1").setLowestCraftingDifficultyToProduce(1.0F);
@@ -173,17 +173,17 @@ public class Items extends Item{
         }
 
         register.registerShapelessRecipe(new ItemStack(Blocks.blockLantern, 1), true,Blocks.torchWood, ironNugget, ironNugget, ironNugget, ironNugget, ironNugget, ironNugget, ironNugget, ironNugget);
-        register.registerShapelessRecipe(new ItemStack(Items.voucherCore, 1), true, Items.voucherAnnihilationSkeleton, Items.voucherDoor, Items.voucherExchanger, Items.voucherPigman, Items.voucherZombieLord, Items.voucherWitch);
+//        register.registerShapelessRecipe(new ItemStack(Items.voucherCore, 1), true, Items.voucherAnnihilationSkeleton, Items.voucherDoor, Items.voucherExchanger, Items.voucherPigman, Items.voucherZombieLord, Items.voucherWitch);
         register.registerShapedRecipe(new ItemStack(clubIron, 1), true, new Object[]{"###", "#*#"," # ", '#', Items.ironNugget , '*', Items.ingotIron});
         register.registerShapedRecipe(new ItemStack(clubMithril, 1), true, new Object[]{"###", "#*#"," # ", '#', Items.mithrilNugget , '*', Items.ingotMithril});
         register.registerShapedRecipe(new ItemStack(clubAdamantium, 1), true, new Object[]{"###", "#*#"," # ", '#', Items.adamantiumNugget , '*', Items.ingotAdamantium});
         register.registerShapedRecipe(new ItemStack(clubVibranium, 1), true, new Object[]{"###", "#*#"," A ", '#', Items.VIBRANIUM_NUGGET , '*', Items.VIBRANIUM_INGOT, 'A', Items.voucherClubCore});
 
-        register.registerShapedRecipe(new ItemStack(itemDynamicCoreIron, 1), true, new Object[]{"ABA", "BCB","ABA", 'A', Items.ingotIron, 'B', Blocks.glass, 'C', Blocks.blockRedstone});
-        register.registerShapedRecipe(new ItemStack(itemDynamicCoreAncient_metal, 1), true, new Object[]{"ABA", "BCB","ABA",'A', Items.ingotAncientMetal , 'B', Blocks.glass, 'C', Items.itemDynamicCoreIron});
-        register.registerShapedRecipe(new ItemStack(itemDynamicCoreMithril, 1), true, new Object[]{"ABA", "BCB","ABA",'A', Items.ingotMithril, 'B', Blocks.glass, 'C', Items.itemDynamicCoreAncient_metal});
-        register.registerShapedRecipe(new ItemStack(itemDynamicCoreAdamantium, 1), true, new Object[]{"ABA", "BCB","ABA", 'A', Items.ingotAdamantium, 'B', Blocks.glass, 'C', Items.itemDynamicCoreMithril});
-        register.registerShapedRecipe(new ItemStack(itemDynamicCoreVibranium, 1), true, new Object[]{"ABA", "BCB","ABA", 'A', Items.VIBRANIUM_INGOT, 'B', Blocks.glass, 'C', Items.itemDynamicCoreAdamantium});
+//        register.registerShapedRecipe(new ItemStack(itemDynamicCoreIron, 1), true, new Object[]{"ABA", "BCB","ABA", 'A', Items.ingotIron, 'B', Blocks.glass, 'C', Blocks.blockRedstone});
+//        register.registerShapedRecipe(new ItemStack(itemDynamicCoreAncient_metal, 1), true, new Object[]{"ABA", "BCB","ABA",'A', Items.ingotAncientMetal , 'B', Blocks.glass, 'C', Items.itemDynamicCoreIron});
+//        register.registerShapedRecipe(new ItemStack(itemDynamicCoreMithril, 1), true, new Object[]{"ABA", "BCB","ABA",'A', Items.ingotMithril, 'B', Blocks.glass, 'C', Items.itemDynamicCoreAncient_metal});
+//        register.registerShapedRecipe(new ItemStack(itemDynamicCoreAdamantium, 1), true, new Object[]{"ABA", "BCB","ABA", 'A', Items.ingotAdamantium, 'B', Blocks.glass, 'C', Items.itemDynamicCoreMithril});
+//        register.registerShapedRecipe(new ItemStack(itemDynamicCoreVibranium, 1), true, new Object[]{"ABA", "BCB","ABA", 'A', Items.VIBRANIUM_INGOT, 'B', Blocks.glass, 'C', Items.itemDynamicCoreAdamantium});
 
         register.registerShapelessRecipe(new ItemStack(Items.voucherClubCore, 1), true, Items.voucherFishing, Items.voucherVillager, Items.voucherPlanting);
 
@@ -207,14 +207,14 @@ public class Items extends Item{
         }
 
 
-        if(Configs.wenscConfig.isRecipeRingKiller.ConfigValue) {
-            register.registerShapedRecipe(new ItemStack(ringKillerCopper, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordCopper , '*', Items.emerald});
-            register.registerShapedRecipe(new ItemStack(ringKillerIron, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordIron , '*', Items.ringKillerCopper});
-            register.registerShapedRecipe(new ItemStack(ringKillerAncient, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordAncientMetal , '*', Items.ringKillerIron});
-            register.registerShapedRecipe(new ItemStack(ringKillerMithril, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordMithril , '*', Items.ringKillerAncient});
-            register.registerShapedRecipe(new ItemStack(ringKillerAdamantium, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordAdamantium , '*', Items.ringKillerMithril});
-            register.registerShapedRecipe(new ItemStack(ringKillerVibranium, 1), true, new Object[]{"###", "#*#","###", '#', VIBRANIUM_SWORD , '*', Items.ringKillerAdamantium});
-        }
+//        if(Configs.wenscConfig.isRecipeRingKiller.ConfigValue) {
+//            register.registerShapedRecipe(new ItemStack(ringKillerCopper, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordCopper , '*', Items.emerald});
+//            register.registerShapedRecipe(new ItemStack(ringKillerIron, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordIron , '*', Items.ringKillerCopper});
+//            register.registerShapedRecipe(new ItemStack(ringKillerAncient, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordAncientMetal , '*', Items.ringKillerIron});
+//            register.registerShapedRecipe(new ItemStack(ringKillerMithril, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordMithril , '*', Items.ringKillerAncient});
+//            register.registerShapedRecipe(new ItemStack(ringKillerAdamantium, 1), true, new Object[]{"###", "#*#","###", '#', Items.swordAdamantium , '*', Items.ringKillerMithril});
+//            register.registerShapedRecipe(new ItemStack(ringKillerVibranium, 1), true, new Object[]{"###", "#*#","###", '#', VIBRANIUM_SWORD , '*', Items.ringKillerAdamantium});
+//        }
 
         for(int i =0; i < GemModifierTypes.values().length; i++) {
             register.registerShapelessRecipe(new ItemStack(itemEnhanceGem2, 1, i), true, new Object[]{new ItemStack(Items.itemGemShard, 2, 0), new ItemStack(itemEnhanceGem, 1, i)});
@@ -235,7 +235,7 @@ public class Items extends Item{
                 'I',
                 Item.ingotAdamantium,
                 'D',
-                Items.voucherCore);
+                Items.diamond);
         register.registerShapelessRecipe(new ItemStack(VIBRANIUM_NUGGET, 9), true, VIBRANIUM_INGOT);
         register.registerShapelessRecipe(new ItemStack(VIBRANIUM_INGOT),
                 true,

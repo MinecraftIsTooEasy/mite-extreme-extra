@@ -89,27 +89,21 @@ public abstract class RecipesArmorTrans {
 
         //Iron -> Ancient
         ((CraftingManagerInvoker)this.crafting_manager).addRecipeP(new ItemStack(Item.helmetAncientMetal),true,
-                "AAA",
                 "AHA",
                 'A',Item.ingotAncientMetal,
                 'H',Item.helmetIron).func_92100_c();
         ((CraftingManagerInvoker)this.crafting_manager).addRecipeP(new ItemStack(Item.plateAncientMetal),true,
-                "APA",
-                "AAA",
-                "AAA",
+                "AHA",
                 'A',Item.ingotAncientMetal,
-                'P',Item.plateIron).func_92100_c();
+                'H',Item.plateIron).func_92100_c();
         ((CraftingManagerInvoker)this.crafting_manager).addRecipeP(new ItemStack(Item.legsAncientMetal),true,
-                "AAA",
-                "ALA",
-                "A A",
+                "AHA",
                 'A',Item.ingotAncientMetal,
-                'L',Item.legsIron).func_92100_c();
+                'H',Item.legsIron).func_92100_c();
         ((CraftingManagerInvoker)this.crafting_manager).addRecipeP(new ItemStack(Item.bootsAncientMetal),true,
-                "ABA",
-                "A A",
+                "AHA",
                 'A',Item.ingotAncientMetal,
-                'B',Item.bootsIron).func_92100_c();
+                'H',Item.bootsIron).func_92100_c();
 
         int plank_subtype, i;
         for(i = 0; i < Block.workbench.getNumSubBlocks(); ++i) {
@@ -130,11 +124,5 @@ public abstract class RecipesArmorTrans {
                 }
             }
         }
-
-        ((CraftingManagerInvoker)this.crafting_manager).addRecipeP(new ItemStack(Item.bootsAncientMetal),true,
-                "ABA",
-                "A A",
-                'A',Item.ingotAncientMetal,
-                'B',Item.bootsIron).func_92100_c();
     }
 }

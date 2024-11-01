@@ -24,10 +24,9 @@ public class DedicatedServerTrans {
     @Inject(method = "playerLoggedIn",at = @At("RETURN"))
     public void playerLoggedIn(ServerPlayer par1EntityPlayerMP, CallbackInfo callbackInfo) {
         par1EntityPlayerMP.sendChatToPlayer(ChatMessage.createFromTranslationKey("[MITE-Extreme]:").setColor(EnumChatFormat.WHITE)
-                .appendComponent(ChatMessage.createFromTranslationKey("MITE-Extreme-" + Constant.MITE_ITE_VERSION +" 由 ")
+                .appendComponent(ChatMessage.createFromTranslationKey("MITE-Extreme-lh-" + Constant.MITE_ITE_VERSION +" 由 ")
                         .appendComponent(ChatMessage.createFromTranslationKey("wensc,洛小雨").setColor(EnumChatFormat.WHITE)))
-                .addText(" 重写,").setColor(EnumChatFormat.DARK_AQUA)
-                .appendComponent(ChatMessage.createFromTranslationKey(" 下载地址：wensc.cn").setColor(EnumChatFormat.DARK_GREEN)));
+                .addText(" 重写,").setColor(EnumChatFormat.DARK_AQUA));
         if (par1EntityPlayerMP.isFirstLogin == true) {
             par1EntityPlayerMP.isFirstLogin = false;
         }

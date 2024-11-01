@@ -19,7 +19,7 @@ public class EntityMirrorSkeleton extends EntitySkeleton {
 
     protected void dropFewItems(boolean recently_hit_by_player, DamageSource damage_source) {
         if (recently_hit_by_player){
-            this.dropItem(Items.voucherZombieLord);
+//            this.dropItem(Items.voucherZombieLord);
             int day = this.getWorld().getDayOfOverworld();
             int diamond_count = (day / 32) > 3 ? 3 : (day / 32);
             for (int i1 = 0; i1 < diamond_count; i1++) {

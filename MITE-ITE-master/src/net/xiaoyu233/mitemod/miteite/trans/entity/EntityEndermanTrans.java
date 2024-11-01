@@ -37,9 +37,9 @@ public class EntityEndermanTrans extends EntityMonster {
 
    @Overwrite
    protected void dropFewItems(boolean recently_hit_by_player, DamageSource damage_source) {
-      if (recently_hit_by_player){
-         this.dropItem(Items.voucherWitch);
-      }
+//      if (recently_hit_by_player){
+//         this.dropItem(Items.voucherWitch);
+//      }
       int item_id = this.getDropItemId();
       if (item_id > 0) {
          int num_drops = this.rand.nextInt(2 + damage_source.getLootingModifier());

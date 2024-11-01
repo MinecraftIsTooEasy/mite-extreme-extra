@@ -114,7 +114,7 @@ public class WorldGenMinableTrans {
 //         if (block == Block.oreAdamantium){
 //            return 130;
 //         }
-         return 140;
+         return 0;
       } else if (block == Block.dirt) {
          return 32;
       } else if (block == Block.gravel) {

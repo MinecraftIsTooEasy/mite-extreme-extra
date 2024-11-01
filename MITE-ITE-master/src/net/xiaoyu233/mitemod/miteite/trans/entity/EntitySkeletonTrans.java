@@ -2,7 +2,7 @@ package net.xiaoyu233.mitemod.miteite.trans.entity;
 
 import net.minecraft.*;
 import net.minecraft.server.MinecraftServer;
-import net.xiaoyu233.mitemod.miteite.entity.EntityExchanger;
+//import net.xiaoyu233.mitemod.miteite.entity.EntityExchanger;
 import net.xiaoyu233.mitemod.miteite.item.Items;
 import net.xiaoyu233.mitemod.miteite.util.Configs;
 import net.xiaoyu233.mitemod.miteite.util.Constant;

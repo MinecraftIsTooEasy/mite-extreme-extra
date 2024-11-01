@@ -180,7 +180,7 @@ public final class BlockLeaves1 extends BlockTransparant {
                 Item item = Item.stick;
                 subtype = this.getBlockSubtype(var6);
                 if (subtype == 0 || subtype == 1) {
-                    if (par5Random.nextInt(3) > 0) {
+                    if (par5Random.nextInt(4) == 0) {
                         item = par1World.getBiomeGenForCoords(par2, par4).isJungleBiome() ? Item.orange : Item.appleRed;
                     }
                 } else if (subtype == 3 && par5Random.nextInt(3) > 0) {
@@ -230,7 +230,7 @@ public final class BlockLeaves1 extends BlockTransparant {
             } else if ((num_drops = this.dropBlockAsEntityItem(info, Item.stick.itemID, 0, 1, 0.05F)) > 0) {
                 return num_drops;
             } else if (leaf_kind == 0 || leaf_kind == 1) {
-                return this.dropBlockAsEntityItem(info, info.getBiome().isJungleBiome() ? Item.orange.itemID : Item.appleRed.itemID, 0, 1, 0.005F);
+                return this.dropBlockAsEntityItem(info, info.getBiome().isJungleBiome() ? Item.orange.itemID : Item.appleRed.itemID, 0, 1, 0.0025F);
             } else {
                 return leaf_kind == 3 ? this.dropBlockAsEntityItem(info, Item.banana.itemID, 0, 1, 0.005F) : 0;
             }

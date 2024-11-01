@@ -192,11 +192,11 @@ public class BiomeDecoratorTrans {
          this.genMinable(SILVER_FREQUENCY_UNDERWORLD, this.silverGen, false);
          this.genMinable(GOLD_FREQUENCY_UNDERWORLD, this.goldGen, false);
          this.genMinable(IRON_FREQUENCY_UNDERWORLD, this.ironGen, false);
-         this.genMinable(MITHRIL_FREQUENCY_UNDERWORLD, this.mithrilGen, false);
-         this.genMinable(ADAMANTIUM_FREQUENCY_UNDERWORLD, this.adamantiteGen, false);
+         this.genMinable(MITHRIL_FREQUENCY_UNDERWORLD, this.mithrilGen, true);
+         this.genMinable(ADAMANTIUM_FREQUENCY_UNDERWORLD, this.adamantiteGen, true);
          this.genMinable(5, this.redstoneGen);
-         this.genMinable(DIAMOND_FREQUENCY_UNDERWORLD, this.diamondGen);
-         this.genMinable(FANCY_RED_FREQUENCY_UNDERWORLD, this.fancyRedGen);
+         this.genMinable(DIAMOND_FREQUENCY_UNDERWORLD, this.diamondGen, true);
+         this.genMinable(FANCY_RED_FREQUENCY_UNDERWORLD, this.fancyRedGen, true);
          this.genMinable(LAPIS_FREQUENCY_UNDERWORLD, this.lapisGen);
          if (this.currentWorld.underworld_y_offset != 0) {
             this.genMinable(50, this.silverfishGen);

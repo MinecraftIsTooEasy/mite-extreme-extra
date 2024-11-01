@@ -31,9 +31,9 @@ public class EntityAncientBoneLordTrans extends EntityBoneLordTrans {
    @Override
    protected void dropFewItems(boolean recently_hit_by_player, DamageSource damage_source) {
       super.dropFewItems(recently_hit_by_player, damage_source);
-      if (recently_hit_by_player){
-         this.dropItem(Items.voucherAnnihilationSkeleton);
-      }
+//      if (recently_hit_by_player){
+//         this.dropItem(Items.voucherAnnihilationSkeleton);
+//      }
    }
 
    @Overwrite

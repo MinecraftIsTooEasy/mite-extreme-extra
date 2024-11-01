@@ -4,8 +4,8 @@ import com.sun.org.apache.bcel.internal.generic.GETFIELD;
 import net.minecraft.*;
 import net.xiaoyu233.fml.relaunch.server.Main;
 import net.xiaoyu233.mitemod.miteite.achievement.Achievements;
-import net.xiaoyu233.mitemod.miteite.block.BlockSpawn;
-import net.xiaoyu233.mitemod.miteite.block.Blocks;
+//import net.xiaoyu233.mitemod.miteite.block.BlockSpawn;
+//import net.xiaoyu233.mitemod.miteite.block.Blocks;
 import net.xiaoyu233.mitemod.miteite.entity.EntityZombieBoss;
 import net.xiaoyu233.mitemod.miteite.inventory.container.ForgingTableSlots;
 import net.xiaoyu233.mitemod.miteite.item.*;
@@ -94,7 +94,7 @@ public abstract class EntityPlayerTrans extends EntityLiving implements ICommand
 
    public int storeTorchTick = 0;
 
-   public int dynamicCoreLevel = 0;
+//   public int dynamicCoreLevel = 0;
 
    public double money = 0D;
 
@@ -1054,15 +1054,15 @@ public abstract class EntityPlayerTrans extends EntityLiving implements ICommand
          return null;
       }
    }
-   public void attackMonsters(List <Entity>targets) {
-      float damage = ((ItemRingKiller)itemRingKiller.getItem()).getRingKillerSkillDamage();
-      for(int i = 0; i< targets.size(); i++) {
-         EntityMonster entityMonster = targets.get(i) instanceof EntityMonster ? (EntityMonster)targets.get(i) : null;
-         if(entityMonster != null && (!EntityEnderman.class.isInstance(entityMonster) && !EntitySilverfish.class.isInstance(entityMonster) && !EntityZombieBoss.class.isInstance(entityMonster))) {
-            entityMonster.attackEntityFrom(new Damage(DamageSource.causePlayerDamage(this.getAsPlayer()), damage));
-         }
-      }
-   }
+//   public void attackMonsters(List <Entity>targets) {
+//      float damage = ((ItemRingKiller)itemRingKiller.getItem()).getRingKillerSkillDamage();
+//      for(int i = 0; i< targets.size(); i++) {
+//         EntityMonster entityMonster = targets.get(i) instanceof EntityMonster ? (EntityMonster)targets.get(i) : null;
+//         if(entityMonster != null && (!EntityEnderman.class.isInstance(entityMonster) && !EntitySilverfish.class.isInstance(entityMonster) && !EntityZombieBoss.class.isInstance(entityMonster))) {
+//            entityMonster.attackEntityFrom(new Damage(DamageSource.causePlayerDamage(this.getAsPlayer()), damage));
+//         }
+//      }
+//   }
 
    @Inject(method = "onLivingUpdate",
            at = @At(value = "INVOKE",
@@ -1071,25 +1071,25 @@ public abstract class EntityPlayerTrans extends EntityLiving implements ICommand
    private void injectTick(CallbackInfo c){
       this.inventory.decrementAnimations();
       // 客户端
-      if(this.storeTorchTick <= 0) {
-         ItemStack currentItemStack = this.inventory.getDynamicCore();
-         if(currentItemStack != null) {
-            if(currentItemStack.getItemDamage() < currentItemStack.getMaxDamage() - 2) {
-
-               this.dynamicCoreLevel = ((ItemDynamicCore)currentItemStack.getItem()).level;
-               if (!this.worldObj.isRemote){
-                  currentItemStack.tryDamageItem(DamageSource.causePlayerDamage(ReflectHelper.dyCast(this)), 2, ReflectHelper.dyCast(this));
-               }
-            } else {
-               this.dynamicCoreLevel = 0;
-            }
-         } else {
-            this.dynamicCoreLevel = 0;
-         }
-         this.storeTorchTick = 10;
-      } else {
-         this.storeTorchTick --;
-      }
+//      if(this.storeTorchTick <= 0) {
+//         ItemStack currentItemStack = this.inventory.getDynamicCore();
+//         if(currentItemStack != null) {
+//            if(currentItemStack.getItemDamage() < currentItemStack.getMaxDamage() - 2) {
+//
+//               this.dynamicCoreLevel = ((ItemDynamicCore)currentItemStack.getItem()).level;
+//               if (!this.worldObj.isRemote){
+//                  currentItemStack.tryDamageItem(DamageSource.causePlayerDamage(ReflectHelper.dyCast(this)), 2, ReflectHelper.dyCast(this));
+//               }
+//            } else {
+//               this.dynamicCoreLevel = 0;
+//            }
+//         } else {
+//            this.dynamicCoreLevel = 0;
+//         }
+//         this.storeTorchTick = 10;
+//      } else {
+//         this.storeTorchTick --;
+//      }
 
       // 服务端
       if (!this.worldObj.isRemote) {
@@ -1108,30 +1108,30 @@ public abstract class EntityPlayerTrans extends EntityLiving implements ICommand
          } else {
             resetAttackMapTimer --;
          }
-         this.itemRingKiller = this.inventory.getRingKiller();
-         if(this.itemRingKiller != null) {
-            float range = ((ItemRingKiller)this.itemRingKiller.getItem()).getRingKillerSkillRange();
-            int cooldownTime = ((ItemRingKiller)this.itemRingKiller.getItem()).getRingKillerSkillCoolDownTime();
-            List <Entity>targets  = this.getNearbyEntities(range, range);
-            if(targets.size() > 0) {
-               if(this.surroundHurtCollDown == cooldownTime) {
-                  this.attackMonsters(targets);
-                  --this.surroundHurtCollDown;
-               } else {
-                  --this.surroundHurtCollDown;
-                  if(this.surroundHurtCollDown <= 0) {
-                     this.surroundHurtCollDown = cooldownTime;
-                  }
-               }
-            } else {
-               if(this.surroundHurtCollDown < cooldownTime) {
-                  --this.surroundHurtCollDown;
-                  if(this.surroundHurtCollDown <= 0) {
-                     this.surroundHurtCollDown = cooldownTime;
-                  }
-               }
-            }
-         }
+//         this.itemRingKiller = this.inventory.getRingKiller();
+//         if(this.itemRingKiller != null) {
+//            float range = ((ItemRingKiller)this.itemRingKiller.getItem()).getRingKillerSkillRange();
+//            int cooldownTime = ((ItemRingKiller)this.itemRingKiller.getItem()).getRingKillerSkillCoolDownTime();
+//            List <Entity>targets  = this.getNearbyEntities(range, range);
+//            if(targets.size() > 0) {
+//               if(this.surroundHurtCollDown == cooldownTime) {
+//                  this.attackMonsters(targets);
+//                  --this.surroundHurtCollDown;
+//               } else {
+//                  --this.surroundHurtCollDown;
+//                  if(this.surroundHurtCollDown <= 0) {
+//                     this.surroundHurtCollDown = cooldownTime;
+//                  }
+//               }
+//            } else {
+//               if(this.surroundHurtCollDown < cooldownTime) {
+//                  --this.surroundHurtCollDown;
+//                  if(this.surroundHurtCollDown <= 0) {
+//                     this.surroundHurtCollDown = cooldownTime;
+//                  }
+//               }
+//            }
+//         }
 
          if (this.craftingBoostTimer > 0) {
             --this.craftingBoostTimer;

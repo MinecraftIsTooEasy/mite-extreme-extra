@@ -28,7 +28,7 @@ public class MITEITEMod extends AbstractMod {
     @Nonnull
     @Override
     public InjectionConfig getInjectionConfig() {
-        return InjectionConfig.Builder.of("MITE-Extreme", MinecraftTrans.class.getPackage(), MixinEnvironment.Phase.INIT).setRequired().build();
+        return InjectionConfig.Builder.of("MITE-Extreme-lh", MinecraftTrans.class.getPackage(), MixinEnvironment.Phase.INIT).setRequired().build();
     }
 
     @Override
@@ -47,7 +47,7 @@ public class MITEITEMod extends AbstractMod {
 
     @Override
     public String modId() {
-        return "MITE-Extreme";
+        return "MITE-Extreme-lh";
     }
 
     @Override

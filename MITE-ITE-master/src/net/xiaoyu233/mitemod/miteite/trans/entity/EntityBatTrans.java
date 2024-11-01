@@ -27,6 +27,17 @@ public class EntityBatTrans extends EntityAmbient {
         super(par1World);
     }
 
+
+    @Override
+    public EntityLiving getAttackTarget() {
+        EntityLiving target = super.getAttackTarget();
+        if(target instanceof EntityLivestock || target instanceof EntityVillager){
+            return null;
+        } else {
+            return target;
+        }
+    }
+
     @Inject(method = "<init>",at = @At("RETURN"))
     private void injectCtor(CallbackInfo callbackInfo){
         if (this.worldObj.isUnderworld()){

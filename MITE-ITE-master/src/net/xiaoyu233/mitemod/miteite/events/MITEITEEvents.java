@@ -44,6 +44,29 @@ public class MITEITEEvents {
                 }
             }
 
+            if (par2Str.startsWith("layer keep ore")){
+//                int blockId = Integer.parseInt(par2Str.substring(11));
+                int var7;
+                int var40;
+                int var25 = player.getBlockPosX();
+                int var26 = player.getFootBlockPosY() - 1;
+                int var30 = player.getBlockPosZ();
+                int var32 = 64;
+                int sum = 0;
+
+                for (int y = 3; y < var26; y++) {
+                    for (var7 = -var32; var7 <= var32; ++var7) {
+                        for (var40 = -var32; var40 <= var32; ++var40) {
+                            if (!(world.getBlock(var25 + var7, y, var30 + var40) instanceof BlockOre)) {
+                                world.setBlock(var25 + var7, y, var30 + var40, 0, 0, 2);
+                                sum++;
+                            }
+                        }
+                    }
+                }
+                player.addChatMessage("矿物合计:" + sum);
+            }
+
             if (par2Str.startsWith("itemlevel setLevel")) {
                 itemStack = player.getHeldItemStack();
                 if (itemStack.stackTagCompound != null) {
@@ -337,7 +360,7 @@ public class MITEITEEvents {
 
         if (par2Str.startsWith("reconfig")) {
             try {
-                Configs.beginToLoadShopConfig();
+//                Configs.beginToLoadShopConfig();
                 Configs.loadConfigs();
                 for (Object o : player.getWorldServer().p().getConfigurationManager().playerEntityList) {
                     EntityPlayer currentPlayer = (EntityPlayer) o;
@@ -386,12 +409,11 @@ public class MITEITEEvents {
     @Subscribe
     public void onPlayerLoggedIn(PlayerLoggedInEvent event) {
         EntityPlayer player = event.getPlayer();
-        player.sendChatToPlayer(ChatMessage.createFromTranslationKey("[Server] ").appendComponent(ChatMessage.createFromTranslationKey("MITE-Extreme模组已加载,当前版本:").setColor(EnumChatFormat.DARK_GREEN)).appendComponent(ChatMessage.createFromText(Constant.MITE_ITE_VERSION).setColor(EnumChatFormat.DARK_RED)));
+        player.sendChatToPlayer(ChatMessage.createFromTranslationKey("[Server] ").appendComponent(ChatMessage.createFromTranslationKey("MITE-Extreme-lh模组已加载,当前版本:").setColor(EnumChatFormat.DARK_GREEN)).appendComponent(ChatMessage.createFromText(Constant.MITE_ITE_VERSION).setColor(EnumChatFormat.DARK_RED)));
         player.sendChatToPlayer(ChatMessage.createFromTranslationKey("[MITE-Extreme]:").setColor(EnumChatFormat.WHITE)
-                .appendComponent(ChatMessage.createFromTranslationKey("MITE-Extreme由 ").setColor(EnumChatFormat.DARK_AQUA))
+                .appendComponent(ChatMessage.createFromTranslationKey("MITE-Extreme-lh由 ").setColor(EnumChatFormat.DARK_AQUA))
                 .appendComponent(ChatMessage.createFromTranslationKey("wensc,洛小雨").setColor(EnumChatFormat.WHITE))
-                .appendComponent(ChatMessage.createFromTranslationKey(" 重写,").setColor(EnumChatFormat.DARK_AQUA))
-                .appendComponent(ChatMessage.createFromTranslationKey(" 下载地址：wensc.cn").setColor(EnumChatFormat.DARK_GREEN)));
+                .appendComponent(ChatMessage.createFromTranslationKey(" 重写,").setColor(EnumChatFormat.DARK_AQUA)));
         if (player.isFirstLogin == true) {
 
             player.isFirstLogin = false;

@@ -38,9 +38,9 @@ public class EntityInfernalCreeperTrans extends EntityCreeperTrans {
 
    @Overwrite
    protected void dropFewItems(boolean recently_hit_by_player, DamageSource damage_source) {
-      if (recently_hit_by_player){
-         this.dropItem(Items.voucherDoor);
-      }
+//      if (recently_hit_by_player){
+//         this.dropItem(Items.voucherDoor);
+//      }
       int num_drops = this.rand.nextInt(4);
       if (num_drops == 0) {
          num_drops = this.rand.nextInt(3);

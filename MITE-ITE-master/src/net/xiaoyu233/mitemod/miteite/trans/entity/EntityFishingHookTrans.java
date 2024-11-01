@@ -69,17 +69,17 @@ public abstract class EntityFishingHookTrans extends Entity {
             return Items.voucherFishing;
          }
 
-         if(this.rand.nextInt(2) == 0) {
+         if(this.rand.nextInt(8) == 0) {
             angler.triggerAchievement(Achievements.fishFortune);
             return fishTypeListStage0[this.rand.nextInt(8)];
          }
 
-         if (this.rand.nextInt(2) == 0) {
+         if (this.rand.nextInt(8) == 0) {
             angler.triggerAchievement(Achievements.fishFortune);
             return fishTypeListStage1[this.rand.nextInt(4)];
          }
 
-         if (this.rand.nextInt(2) == 0) {
+         if (this.rand.nextInt(8) == 0) {
             angler.triggerAchievement(Achievements.fishFortune);
             return fishTypeListStage2[this.rand.nextInt(4)];
          }

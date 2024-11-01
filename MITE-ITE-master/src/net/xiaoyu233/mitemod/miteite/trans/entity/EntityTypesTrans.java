@@ -42,7 +42,7 @@ public class EntityTypesTrans {
       addMapping(EntityAnnihilationSkeleton.class, "EntityAnnihilationSkeleton", 205);
       addMapping(EntityWanderingWitch.class, "EntityWanderingWitch", 206);
       addMapping(EntityZombieDoor.class, "EntityZombieDoor", 207);
-      addMapping(EntityExchanger.class, "EntityExchanger", 208);
+//      addMapping(EntityExchanger.class, "EntityExchanger", 208);
       addMapping(EntityZombieBoss.class, "EntityZombieBoss", 209);
       addMapping(EntityMirrorSkeleton.class, "EntityMirrorSkeleton", 210);
 //      addMapping(EntityThunderMan.class, "EntityThunderMan", 209);

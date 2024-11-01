@@ -24,23 +24,23 @@ public class EntityRenderTrans {
     public EntityRenderTrans(Minecraft par1Minecraft) {
     }
 
-    @Overwrite
-    private float a(EntityPlayer par1EntityPlayer, float par2) {
-        MobEffect var3 = par1EntityPlayer.getActivePotionEffect(MobEffectList.nightVision);
-        if(var3 != null) {
-            int var4 = var3.getDuration();
-            return var4 > 200 ? 1.0F :0.7F + MathHelper.sin(((float)var4 - par2) * 3.1415927F * 0.2F) * 0.3F;
-        } else {
-            return (float) par1EntityPlayer.dynamicCoreLevel * 0.2f;
-        }
-    }
+//    @Overwrite
+//    private float a(EntityPlayer par1EntityPlayer, float par2) {
+//        MobEffect var3 = par1EntityPlayer.getActivePotionEffect(MobEffectList.nightVision);
+//        if(var3 != null) {
+//            int var4 = var3.getDuration();
+//            return var4 > 200 ? 1.0F :0.7F + MathHelper.sin(((float)var4 - par2) * 3.1415927F * 0.2F) * 0.3F;
+//        } else {
+//            return (float) par1EntityPlayer.dynamicCoreLevel * 0.2f;
+//        }
+//    }
 
-    @Redirect(method = "h",
-            at=@At(value = "INVOKE",
-                    target = "Lnet/minecraft/ClientPlayer;isPotionActive(Lnet/minecraft/MobEffectList;)Z"))
-    public boolean isPotionActiveOrDynamicCore(ClientPlayer caller, MobEffectList par1Potion) {
-        return (caller.isPotionActive(par1Potion) || caller.dynamicCoreLevel > 0);
-    }
+//    @Redirect(method = "h",
+//            at=@At(value = "INVOKE",
+//                    target = "Lnet/minecraft/ClientPlayer;isPotionActive(Lnet/minecraft/MobEffectList;)Z"))
+//    public boolean isPotionActiveOrDynamicCore(ClientPlayer caller, MobEffectList par1Potion) {
+//        return (caller.isPotionActive(par1Potion) || caller.dynamicCoreLevel > 0);
+//    }
 
     @Inject(locals = LocalCapture.CAPTURE_FAILHARD, method = "g(F)V", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/bdd;getBlockId(III)I", shift = At.Shift.AFTER))
     public void judgeBed(float par1, CallbackInfo ci, EntityLiving var2, float var3, double var4, double var6, double var8, int var10) {

@@ -21,7 +21,7 @@ public class RegisterHelper {
         Items.registerItems();
         Blocks.registerBlocks();
         // 当所有物品和方块注册完之后开始执行价格初始化
-        registerPrice();
+//        registerPrice();
         Achievements.registerAchievements();
     }
 

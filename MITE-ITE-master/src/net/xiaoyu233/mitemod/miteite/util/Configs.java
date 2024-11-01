@@ -46,7 +46,7 @@ public class Configs {
         public static ConfigItem <Float> inWallDamageForPlayer = new ConfigItem("inWallDamageForPlayer", 10.0F, "玩家墙内窒息伤害(小数)", 0f ,100f);
         public static ConfigItem <Double> steppedMobDamageFactor = new ConfigItem("steppedMobDamageFactor", 1d, "渐进伤害每次增幅点数基础值(小数)", 0d ,100d);
         public static ConfigItem <Double> steppedMobDamageProgressMax = new ConfigItem("steppedMobDamageProgressMax", 4d, "怪物对玩家渐进伤害增幅最大值(小数)", 0d,100d);
-        public static ConfigItem <Integer> steppedMobDamageProgressIncreaseDay = new ConfigItem("steppedMobDamageProgressIncreaseDay_v0.1.0", 50, "渐进伤害每次增幅每增加一点所需天数(整数)", 0 ,500);
+        public static ConfigItem <Integer> steppedMobDamageProgressIncreaseDay = new ConfigItem("steppedMobDamageProgressIncreaseDay", 50, "渐进伤害每次增幅每增加一点所需天数(整数)", 0 ,500);
         public static ConfigItem <Double> steppedPlayerDamageProgress = new ConfigItem("steppedPlayerDamageProgress", 2d, "玩家对怪物渐进伤害(不计附魔)最大值", 0d ,100d);
         public static ConfigItem <Double> steppedPlayerDamageIncreasePerLvl = new ConfigItem("steppedPlayerDamageIncreasePerLvl", 0.1d, "玩家对怪物渐进伤害每级加成", 0d ,10d);
         public static ConfigItem <Integer> fishingXp = new ConfigItem("fishingXp", 10, "钓鱼经验(整数)", 0 ,10000);
@@ -124,24 +124,24 @@ public class Configs {
         public static ConfigItem <Integer> breedXpCow = new ConfigItem("breedXpCow", 25, "牛繁殖获得经验", 0 ,10000);
         public static ConfigItem <Integer> emeraldFrequencyBigHills = new ConfigItem("emeraldFrequencyBigHills", 6, "山地绿宝石矿每区块最少生成个数", 0 ,100);
         public static ConfigItem <Boolean> overworldAdamantiteOre = new ConfigItem("overworldAdamantiteOre", false, "主世界生成艾德曼");
-        public static ConfigItem <Integer> copperFrequencyOverworld = new ConfigItem("copperFrequencyOverworld_v0.0.5", 40, "主世界铜矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> silverFrequencyOverworld = new ConfigItem("silverFrequencyOverworld_v0.0.5", 20, "主世界银矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> ironFrequencyOverworld = new ConfigItem("ironFrequencyOverworld_v0.0.5", 30, "主世界铁矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> goldFrequencyOverworld = new ConfigItem("goldFrequencyOverworld_v0.0.5.3", 25, "主世界金矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> mithrilFrequencyOverworld = new ConfigItem("mithrilFrequencyOverworld_v0.0.5", 0, "主世界秘银矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> copperFrequencyOverworld = new ConfigItem("copperFrequencyOverworld", 40, "主世界铜矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> silverFrequencyOverworld = new ConfigItem("silverFrequencyOverworld", 20, "主世界银矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> ironFrequencyOverworld = new ConfigItem("ironFrequencyOverworld", 30, "主世界铁矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> goldFrequencyOverworld = new ConfigItem("goldFrequencyOverworld", 25, "主世界金矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> mithrilFrequencyOverworld = new ConfigItem("mithrilFrequencyOverworld", 0, "主世界秘银矿生成频率", 0 ,100);
         public static ConfigItem <Integer> lapisFrequencyOverworld = new ConfigItem("lapisFrequencyOverworld", 4, "主世界青金石矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> diamondFrequencyOverworld = new ConfigItem("diamondFrequencyOverworld_v0.0.5", 0, "主世界钻石矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> diamondFrequencyOverworld = new ConfigItem("diamondFrequencyOverworld", 0, "主世界钻石矿生成频率", 0 ,100);
         public static ConfigItem <Integer> adamantiumFrequencyOverworld = new ConfigItem("adamantiumFrequencyOverworld", 1, "主世界艾德曼矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> copperFrequencyUnderworld = new ConfigItem("copperFrequencyUnderworld_v0.0.5", 0, "地底世界铜矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> silverFrequencyUnderworld = new ConfigItem("silverFrequencyUnderworld_v0.0.5", 0, "地底世界银矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> ironFrequencyUnderworld = new ConfigItem("ironFrequencyUnderworld_v0.0.5", 0, "地底世界铁矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> goldFrequencyUnderworld = new ConfigItem("goldFrequencyUnderworld_v0.0.5", 0, "地底世界金矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> mithrilFrequencyUnderworld = new ConfigItem("mithrilFrequencyUnderworld_v0.0.5", 6, "地底世界秘银矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> lapisFrequencyUnderworld = new ConfigItem("lapisFrequencyUnderworld_v0.0.5", 0, "地底世界青金石矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> diamondFrequencyUnderworld = new ConfigItem("diamondFrequencyUnderworld_v0.0.5", 6, "地底世界钻石矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> copperFrequencyUnderworld = new ConfigItem("copperFrequencyUnderworld", 40, "地底世界铜矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> silverFrequencyUnderworld = new ConfigItem("silverFrequencyUnderworld", 10, "地底世界银矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> ironFrequencyUnderworld = new ConfigItem("ironFrequencyUnderworld", 60, "地底世界铁矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> goldFrequencyUnderworld = new ConfigItem("goldFrequencyUnderworld", 20, "地底世界金矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> mithrilFrequencyUnderworld = new ConfigItem("mithrilFrequencyUnderworld", 10, "地底世界秘银矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> lapisFrequencyUnderworld = new ConfigItem("lapisFrequencyUnderworld", 5, "地底世界青金石矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> diamondFrequencyUnderworld = new ConfigItem("diamondFrequencyUnderworld", 6, "地底世界钻石矿生成频率", 0 ,100);
         public static ConfigItem <Integer> fancyRedFrequencyUnderworld = new ConfigItem("fancyRedFrequencyUnderworld", 3, "地底世界红钻矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> adamantiumFrequencyUnderworld = new ConfigItem("adamantiumFrequencyUnderworld_v0.0.9", 1, "地底世界艾德曼矿生成频率", 0 ,100);
-        public static ConfigItem <Integer> underworldMantleBlockOffset = new ConfigItem("underworldMantleBlockOffset_v0.0.2", 75, "地底世界地幔位置向上偏移", 0 ,140);
+        public static ConfigItem <Integer> adamantiumFrequencyUnderworld = new ConfigItem("adamantiumFrequencyUnderworld", 8, "地底世界艾德曼矿生成频率", 0 ,100);
+        public static ConfigItem <Integer> underworldMantleBlockOffset = new ConfigItem("underworldMantleBlockOffset", 0, "地底世界地幔位置向上偏移", 0 ,140);
         public static ConfigItem <Integer> netherAdamantiumMaxCountPerChunk = new ConfigItem("netherAdamantiumMaxCountPerChunk", 2, "地狱艾德曼每个区块最大生成数量", 0 ,100);
         public static ConfigItem <Integer> netherAdamantiumMaxCountPerVein = new ConfigItem("netherAdamantiumMaxCountPerVein", 1, "地狱艾德曼每个矿脉最大矿物生成数量", 0 ,100);
         public static ConfigItem <Integer> healthBarXOffset = new ConfigItem("healthBarXOffset", 0, "营养条GUI横向偏移");
@@ -150,8 +150,8 @@ public class Configs {
         public static ConfigItem <Integer> underworldGateOpenDay = new ConfigItem("underworldGateOpenDay", 1, "地下世界传送门多少天可以打开(主世界天数)", 1 ,500);
         public static ConfigItem <Integer> netherGateOpenDay = new ConfigItem("netherGateOpenDay", 1, "地狱传送门多少天可以打开(主世界天数)", 1 ,500);
         public static ConfigItem <Boolean> isAfterDeathKeep = new ConfigItem("isAfterDeathKeep", false, "是否死亡不掉落");
-        public static ConfigItem <Boolean> isCloseShop = new ConfigItem("isCloseShop", false, "关闭商店系统");
-        public static ConfigItem <Float> plantGrowthRate = new ConfigItem("plantGrowthRate_v0.0.9", 0.5F, "作物生长速度倍率",0f,1f);
+        public static ConfigItem <Boolean> isCloseShop = new ConfigItem("isCloseShop", true, "关闭商店系统");
+        public static ConfigItem <Float> plantGrowthRate = new ConfigItem("plantGrowthRate", 0.5F, "作物生长速度倍率",0f,1f);
         public static ConfigItem <Integer> whichDayGenVillage = new ConfigItem("whichDayGenVillage", 60, "多少天生成村庄", 1 ,500);
         public static ConfigItem <Integer> maxLevelLimit = new ConfigItem("maxLevelLimit", 300, "玩家最大限制等级", 0 ,1000);
         public static ConfigItem <Integer> enhancePerLvlCostExp = new ConfigItem("enhancePerLvlCostExp", 100, "附魔书附魔每增加一级消耗多少经验", 0 ,10000);
@@ -175,7 +175,7 @@ public class Configs {
         wenscMap.put("inWallDamageForPlayer", wenscConfig.inWallDamageForPlayer);
         wenscMap.put("steppedMobDamageFactor", wenscConfig.steppedMobDamageFactor);
         wenscMap.put("steppedMobDamageProgressMax", wenscConfig.steppedMobDamageProgressMax);
-        wenscMap.put("steppedMobDamageProgressIncreaseDay_v0.1.0", wenscConfig.steppedMobDamageProgressIncreaseDay);
+        wenscMap.put("steppedMobDamageProgressIncreaseDay", wenscConfig.steppedMobDamageProgressIncreaseDay);
         wenscMap.put("steppedPlayerDamageProgress", wenscConfig.steppedPlayerDamageProgress);
         wenscMap.put("steppedPlayerDamageIncreasePerLvl", wenscConfig.steppedPlayerDamageIncreasePerLvl);
         wenscMap.put("fishingXp", wenscConfig.fishingXp);
@@ -253,27 +253,27 @@ public class Configs {
         wenscMap.put("breedXpCow", wenscConfig.breedXpCow);
         wenscMap.put("emeraldFrequencyBigHills", wenscConfig.emeraldFrequencyBigHills);
 
-        wenscMap.put("copperFrequencyOverworld_v0.0.5", wenscConfig.copperFrequencyOverworld);
-        wenscMap.put("silverFrequencyOverworld_v0.0.5", wenscConfig.silverFrequencyOverworld);
-        wenscMap.put("ironFrequencyOverworld_v0.0.5", wenscConfig.ironFrequencyOverworld);
-        wenscMap.put("goldFrequencyOverworld_v0.0.5.3", wenscConfig.goldFrequencyOverworld);
+        wenscMap.put("copperFrequencyOverworld", wenscConfig.copperFrequencyOverworld);
+        wenscMap.put("silverFrequencyOverworld", wenscConfig.silverFrequencyOverworld);
+        wenscMap.put("ironFrequencyOverworld", wenscConfig.ironFrequencyOverworld);
+        wenscMap.put("goldFrequencyOverworld", wenscConfig.goldFrequencyOverworld);
         wenscMap.put("lapisFrequencyOverworld", wenscConfig.lapisFrequencyOverworld);
 
         wenscMap.put("adamantiumFrequencyOverworld", wenscConfig.adamantiumFrequencyOverworld);
         wenscMap.put("overworldAdamantiteOre", wenscConfig.overworldAdamantiteOre);
-        wenscMap.put("mithrilFrequencyOverworld_v0.0.5", wenscConfig.mithrilFrequencyOverworld);
-        wenscMap.put("diamondFrequencyOverworld_v0.0.5", wenscConfig.diamondFrequencyOverworld);
-        wenscMap.put("copperFrequencyUnderworld_v0.0.5", wenscConfig.copperFrequencyUnderworld);
-        wenscMap.put("silverFrequencyUnderworld_v0.0.5", wenscConfig.silverFrequencyUnderworld);
-        wenscMap.put("ironFrequencyUnderworld_v0.0.5", wenscConfig.ironFrequencyUnderworld);
-        wenscMap.put("goldFrequencyUnderworld_v0.0.5", wenscConfig.goldFrequencyUnderworld);
-        wenscMap.put("lapisFrequencyUnderworld_v0.0.5", wenscConfig.lapisFrequencyUnderworld);
+        wenscMap.put("mithrilFrequencyOverworld", wenscConfig.mithrilFrequencyOverworld);
+        wenscMap.put("diamondFrequencyOverworld", wenscConfig.diamondFrequencyOverworld);
+        wenscMap.put("copperFrequencyUnderworld", wenscConfig.copperFrequencyUnderworld);
+        wenscMap.put("silverFrequencyUnderworld", wenscConfig.silverFrequencyUnderworld);
+        wenscMap.put("ironFrequencyUnderworld", wenscConfig.ironFrequencyUnderworld);
+        wenscMap.put("goldFrequencyUnderworld", wenscConfig.goldFrequencyUnderworld);
+        wenscMap.put("lapisFrequencyUnderworld", wenscConfig.lapisFrequencyUnderworld);
 
-        wenscMap.put("mithrilFrequencyUnderworld_v0.0.5", wenscConfig.mithrilFrequencyUnderworld);
-        wenscMap.put("diamondFrequencyUnderworld_v0.0.5", wenscConfig.diamondFrequencyUnderworld);
+        wenscMap.put("mithrilFrequencyUnderworld", wenscConfig.mithrilFrequencyUnderworld);
+        wenscMap.put("diamondFrequencyUnderworld", wenscConfig.diamondFrequencyUnderworld);
         wenscMap.put("fancyRedFrequencyUnderworld", wenscConfig.fancyRedFrequencyUnderworld);
-        wenscMap.put("adamantiumFrequencyUnderworld_v0.0.9", wenscConfig.adamantiumFrequencyUnderworld);
-        wenscMap.put("underworldMantleBlockOffset_v0.0.2", wenscConfig.underworldMantleBlockOffset);
+        wenscMap.put("adamantiumFrequencyUnderworld", wenscConfig.adamantiumFrequencyUnderworld);
+        wenscMap.put("underworldMantleBlockOffset", wenscConfig.underworldMantleBlockOffset);
         wenscMap.put("netherAdamantiumMaxCountPerChunk", wenscConfig.netherAdamantiumMaxCountPerChunk);
         wenscMap.put("netherAdamantiumMaxCountPerVein", wenscConfig.netherAdamantiumMaxCountPerVein);
         wenscMap.put("healthBarXOffset", wenscConfig.healthBarXOffset);
@@ -282,8 +282,8 @@ public class Configs {
         wenscMap.put("underworldGateOpenDay", wenscConfig.underworldGateOpenDay);
         wenscMap.put("netherGateOpenDay", wenscConfig.netherGateOpenDay);
         wenscMap.put("isAfterDeathKeep", wenscConfig.isAfterDeathKeep);
-        wenscMap.put("isCloseShop", wenscConfig.isCloseShop);
-        wenscMap.put("plantGrowthRate_v0.0.9", wenscConfig.plantGrowthRate);
+//        wenscMap.put("isCloseShop", wenscConfig.isCloseShop);
+        wenscMap.put("plantGrowthRate", wenscConfig.plantGrowthRate);
         wenscMap.put("whichDayGenVillage", wenscConfig.whichDayGenVillage);
         wenscMap.put("maxLevelLimit", wenscConfig.maxLevelLimit);
         wenscMap.put("enhancePerLvlCostExp", wenscConfig.enhancePerLvlCostExp);
@@ -293,7 +293,7 @@ public class Configs {
 
 //        wenscMap.put("md5", wenscConfig.md5String);
 
-        String filePth = "mite-extreme.cfg";
+        String filePth = "mite-extreme-lh.cfg";
         File file_mite = new File(filePth);
         if (file_mite.exists()) {
             Properties properties = new Properties();
@@ -321,7 +321,7 @@ public class Configs {
                 e.printStackTrace();
                 JFrame jFrame = new JFrame();
                 jFrame.setAlwaysOnTop(true);
-                JOptionPane.showMessageDialog(jFrame, "mite-extreme.cfg配置文件失败，请前往www.wensc.cn自行下载", "错误", 0);
+                JOptionPane.showMessageDialog(jFrame, "mite-extreme-lh.cfg配置文件失败，请前往www.wensc.cn自行下载", "错误", 0);
                 System.exit(0);
             }
         }
