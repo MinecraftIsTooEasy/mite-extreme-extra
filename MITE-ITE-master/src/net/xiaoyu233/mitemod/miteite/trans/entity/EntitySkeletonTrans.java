@@ -4,6 +4,7 @@ import net.minecraft.*;
 import net.minecraft.server.MinecraftServer;
 //import net.xiaoyu233.mitemod.miteite.entity.EntityExchanger;
 import net.xiaoyu233.mitemod.miteite.item.Items;
+import net.xiaoyu233.mitemod.miteite.item.enchantment.Enchantments;
 import net.xiaoyu233.mitemod.miteite.util.Configs;
 import net.xiaoyu233.mitemod.miteite.util.Constant;
 import net.xiaoyu233.mitemod.miteite.util.MonsterUtil;
@@ -83,6 +84,14 @@ public class EntitySkeletonTrans extends EntityMonster implements IRangedEntity 
       } else {
          this.setCombatTask();
          super.setCurrentItemOrArmor(0, (new ItemStack(this.getSkeletonType() == 2 ? (this.getRNG().nextInt(2) == 0 ? Item.clubWood : Items.clubIron) : Item.bow)).randomizeForMob(this, true));
+      }
+   }
+
+   @Override
+   protected void enchantEquipment(ItemStack item_stack) {
+      super.enchantEquipment(item_stack);
+      if(item_stack.getItem() instanceof ItemBow && rand.nextInt(20) == 0){
+         item_stack.addEnchantment(Enchantments.enchantmentSlowdown, rand.nextInt(5));
       }
    }
 

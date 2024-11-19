@@ -123,12 +123,11 @@ public class BiomeBaseTrans {
       this.spawnableMonsterList.add(new BiomeMeta(EntityGhast.class, 10, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityAncientBoneLord.class, 10, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityZombieLord.class, 2, 1, 1));
-//      this.spawnableMonsterList.add(new BiomeMeta(EntityAnnihilationSkeleton.class, 1, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityWanderingWitch.class, 1, 1, 1));
-
       this.spawnableMonsterList.add(new BiomeMeta(EntityZombieDoor.class, 2, 1, 1));
-//      this.spawnableMonsterList.add(new BiomeMeta(EntityExchanger.class, 2,1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityMirrorSkeleton.class, 5,1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityMinerZombie.class, 5, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityZombieEliteLord.class, 2, 1, 1));
    }
 
    @Overwrite

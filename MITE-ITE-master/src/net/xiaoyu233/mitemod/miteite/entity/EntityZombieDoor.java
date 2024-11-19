@@ -45,7 +45,6 @@ public class EntityZombieDoor extends EntityZombie {
     @Override
     protected void dropFewItems(boolean recently_hit_by_player, DamageSource damage_source) {
         if (recently_hit_by_player){
-//            this.dropItem(Items.voucherDoor);
             int day = this.getWorld().getDayOfOverworld();
             int diamond_count = (day / 32) > 3 ? 3 : (day / 32);
             for (int i1 = 0; i1 < diamond_count; i1++) {
@@ -84,20 +83,6 @@ public class EntityZombieDoor extends EntityZombie {
                         ++spawnSums;
                     }
                 }
-//                if(Configs.wenscConfig.isSpawnExchanger.ConfigValue) {
-//                    if(haveTryToSpawnExchanger == false) {
-//                        if( rand.nextInt(10) == 0) {
-//                            EntityExchanger entityExchanger = new EntityExchanger(this.worldObj);
-//                            entityExchanger.setPosition(this.posX, this.posY, this.posZ);
-//                            entityExchanger.refreshDespawnCounter(-9600);
-//                            this.worldObj.spawnEntityInWorld(entityExchanger);
-//                            entityExchanger.onSpawnWithEgg(null);
-//                            entityExchanger.setAttackTarget(this.getTarget());
-//                            entityExchanger.entityFX(EnumEntityFX.summoned);
-//                        }
-//                        this.haveTryToSpawnExchanger = true;
-//                    }
-//                }
             }
         }
     }

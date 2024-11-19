@@ -169,6 +169,28 @@ public abstract class WorldServerTrans extends World {
                return entity_class;
             }
 
+            if (entity_class == EntityMinerZombie.class) {
+               int day =  getDayOfOverworld();
+               if(this.isOverworld()) {
+                  if(day > 32){
+                     return entity_class;
+                  }
+               }  else {
+                  return entity_class;
+               }
+            }
+
+            if (entity_class == EntityZombieEliteLord.class) {
+               int day =  getDayOfOverworld();
+               if(this.isOverworld()) {
+                  if(day > 32){
+                     return entity_class;
+                  }
+               }  else {
+                  return entity_class;
+               }
+            }
+
             if (entity_class == EntityInvisibleStalker.class) {
                if (!check_depth || y <= 40) {
                   return entity_class;

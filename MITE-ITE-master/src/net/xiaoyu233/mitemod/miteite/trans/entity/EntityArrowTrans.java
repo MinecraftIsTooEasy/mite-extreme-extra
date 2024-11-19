@@ -2,11 +2,15 @@ package net.xiaoyu233.mitemod.miteite.trans.entity;
 
 import net.minecraft.*;
 import net.xiaoyu233.mitemod.miteite.item.Items;
+import net.xiaoyu233.mitemod.miteite.item.enchantment.Enchantments;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(EntityArrow.class)
 public class EntityArrowTrans extends Entity {
@@ -77,6 +81,15 @@ public class EntityArrowTrans extends Entity {
       // 32天 -> 最大200天
       int day = Math.max(Math.min(this.worldObj.getDayOfOverworld() - 32, 168), 0);
       return (itemArrow.getDamage() + day * 0.025f );
+   }
+
+   @Inject(method = "onUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/EntityArrow;getLauncher()Lnet/minecraft/ItemStack;", shift = At.Shift.AFTER), locals = LocalCapture.CAPTURE_FAILHARD)
+   public void injectEnchantment(CallbackInfo ci, int var16, Vec3D current_pos, Vec3D future_pos, Raycast raycast, RaycastCollision var4, RaycastCollision block_collision, float var20, Entity entity_hit, float damage_multiplier, float var24, DamageSource var22, Damage damage, boolean entity_immune_to_arrow, EntityDamageResult result, EntityLiving var25){
+      ItemStack launcher = this.getLauncher();
+      if (launcher != null && this.rand.nextFloat() < launcher.getEnchantmentLevelFraction(Enchantments.enchantmentSlowdown)) {
+         int level = launcher.getEnchantmentLevel(Enchantments.enchantmentSlowdown);
+         var25.addPotionEffect(new MobEffect(MobEffectList.moveSlowdown.id, 160 + launcher.getEnchantmentLevelFractionOfInteger(Enchantments.enchantmentSlowdown, 240), level > 0 ? rand.nextInt(level) : 0));
+      }
    }
 
 }

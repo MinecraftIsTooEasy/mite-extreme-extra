@@ -101,6 +101,7 @@ enchantment.beheading=斩首
 enchantment.conqueror=征服者
 enchantment.fixed=固定
 enchantment.chain=连锁
+enchantment.slowdown=缓慢
 
 entity.EntityZombieLord.name=僵尸领主
 entity.EntityAnnihilationSkeleton.name=湮灭骷髅
@@ -108,6 +109,8 @@ entity.EntityWanderingWitch.name=流浪女巫
 entity.EntityZombieDoor.name=僵尸盗贼
 entity.EntityExchanger.name=转移骷髅
 entity.EntityZombieBoss.name=僵尸BOSS
+entity.EntityMinerZombie.name=矿工僵尸
+entity.EntityZombieLongdead.name=僵尸精英领主
 
 gui.forgingTable.start=开始锻造
 gui.forgingTable.item_req=锻造需要

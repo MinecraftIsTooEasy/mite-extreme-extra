@@ -6,6 +6,9 @@ import net.xiaoyu233.mitemod.miteite.util.Configs;
 import net.xiaoyu233.mitemod.miteite.util.Constant;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EntitySpider.class)
 public class EntitySpiderTrans extends EntityArachnid {
@@ -21,5 +24,22 @@ public class EntitySpiderTrans extends EntityArachnid {
       this.setEntityAttribute(GenericAttributes.maxHealth, this.getEntityAttributeValue(GenericAttributes.maxHealth) * 1.5D + (double)day / 12.0D);
       this.setEntityAttribute(GenericAttributes.attackDamage, this.getEntityAttributeValue(GenericAttributes.attackDamage) + (double)day / 12.0D);
       this.setEntityAttribute(GenericAttributes.followRange, 64.0D);
+   }
+
+   @Override
+   public void onDeath(DamageSource par1DamageSource) {
+      if (!this.worldObj.isRemote) {
+         if(this.rand.nextInt(100) < 3){
+            for(int integer = 0; integer < 4; ++integer) {
+               EntityWoodSpider spider = new EntityWoodSpider(this.worldObj);
+               spider.setPosition(this.getBlockPosX(), this.getFootBlockPosY(), this.getBlockPosZ());
+               spider.refreshDespawnCounter(-9600);
+               this.worldObj.spawnEntityInWorld(spider);
+               spider.onSpawnWithEgg(null);
+               spider.setAttackTarget(this.getTarget());
+            }
+         }
+      }
+      super.onDeath(par1DamageSource);
    }
 }
