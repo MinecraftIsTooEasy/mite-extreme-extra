@@ -25,6 +25,16 @@ public class EntityZombieEliteLord extends EntityRevenant {
     }
 
     @Override
+    public boolean getCanSpawnHere(boolean perform_light_check) {
+        Boolean before=  super.getCanSpawnHere(perform_light_check);
+        if(before  && this.worldObj.getDayOfOverworld() > 32) {
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+    @Override
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
         int day = this.getWorld().getDayOfOverworld();

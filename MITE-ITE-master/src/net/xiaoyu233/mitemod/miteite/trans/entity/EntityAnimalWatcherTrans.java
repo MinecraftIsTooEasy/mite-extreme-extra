@@ -17,12 +17,11 @@ public class EntityAnimalWatcherTrans  extends EntityMonster {
         super(par1World);
     }
 
-    @Inject(method = "getCooloffForBlock", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getCooloffForBlock", at = @At("RETURN"), cancellable = true)
     public void boostMinerDigSpeed(CallbackInfoReturnable<Integer> cir){
         if(ReflectHelper.dyCast(EntityAnimalWatcher.class, this) instanceof EntityMinerZombie){
-            cir.setReturnValue(5);
+            cir.setReturnValue(cir.getReturnValueI() / 5);
             cir.cancel();
         }
-
     }
 }

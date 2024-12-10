@@ -175,12 +175,9 @@ public abstract class EntityPlayerTrans extends EntityLiving implements ICommand
    @Shadow
    protected void resetHeight() {}
 
-   public float getBrightness(float par1) {
-      return 1f;
-   }
-   public int c(float par1) {
-      return 15728880;
-   }
+//   public int c(float par1) {
+//      return 15728880;
+//   }
 
    @Overwrite
    public void getOutOfBed(Entity entity_to_look_at) {
@@ -256,20 +253,6 @@ public abstract class EntityPlayerTrans extends EntityLiving implements ICommand
          boolean var6 = !var4.isSolid() && !var4.isLiquid();
          boolean var7 = !var5.isSolid() && !var5.isLiquid();
          return par2 && var6 && var7 ? par1ChunkCoordinates : null;
-      }
-   }
-
-   public boolean onEntityRightClicked(EntityPlayer player, ItemStack item_stack) {
-      if (super.onEntityRightClicked(player, item_stack)) {
-         return true;
-      } else if (this.riddenByEntity == null && player.riddenByEntity == null && player.ridingEntity == null && this.ridingEntity == null && item_stack == null) {
-         if (player.onServer()) {
-            player.mountEntity(this);
-         }
-
-         return true;
-      } else {
-         return false;
       }
    }
 
