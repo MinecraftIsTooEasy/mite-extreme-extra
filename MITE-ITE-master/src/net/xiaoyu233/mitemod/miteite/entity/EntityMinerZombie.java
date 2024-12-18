@@ -42,7 +42,7 @@ public class EntityMinerZombie extends EntityZombie {
             int day = this.getWorld().getDayOfOverworld();
             int diamond_count = (day / 32) > 3 ? 3 : (day / 32);
             for (int i1 = 0; i1 < diamond_count; i1++) {
-                this.dropItem(Item.emerald);
+                this.dropItem(Item.ironNugget);
             }
         }
     }
