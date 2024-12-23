@@ -101,21 +101,21 @@ public abstract class EntityMonsterTrans extends EntityInsentient implements IMo
       int day = this.getWorld().getDayOfOverworld();
       Random rand;
       if (day > 32 && ((day % 2 == 0 || day > 64) && hour >= 18 || ((day - 1) % 2 == 0 || day > 64) && hour <= 6)) {
-         this.addPotionEffect(new MobEffect(MobEffectList.moveSpeed.id, 999999, Math.min(this.getRNG().nextInt(Math.max((day - 32) / 96, 0)),3), true));
+         this.addPotionEffect(new MobEffect(MobEffectList.moveSpeed.id, 999999, Math.min(this.getRNG().nextInt(Math.max((day - 32) / 96, 1)),2), true));
          rand = this.getRNG();
          if (rand.nextInt(5) == 0) {
-            this.addPotionEffect(new MobEffect(MobEffectList.damageBoost.id, 999999, Math.min(this.getRNG().nextInt(Math.max((day - 32) / 128, 0)),2), true));
+            this.addPotionEffect(new MobEffect(MobEffectList.damageBoost.id, 999999, Math.min(this.getRNG().nextInt(Math.max((day - 32) / 128, 1)),0), true));
          }
 
          MonsterUtil.addDefaultArmor(day, this, false);
       } else if (day > 128) {
          rand = this.getRNG();
          if (rand.nextInt(4) < (day - 96) / 32) {
-            this.addPotionEffect(new MobEffect(MobEffectList.moveSpeed.id, 999999, Math.min(this.getRNG().nextInt(Math.max((day - 32) / 96, 0)),3), true));
+            this.addPotionEffect(new MobEffect(MobEffectList.moveSpeed.id, 999999, Math.min(this.getRNG().nextInt(Math.max((day - 32) / 96, 1)),2), true));
          }
 
          if (rand.nextInt(5) < (day - 96) / 32) {
-            this.addPotionEffect(new MobEffect(MobEffectList.damageBoost.id, 999999, Math.min(this.getRNG().nextInt(Math.max((day - 32) / 128, 0)),2), true));
+            this.addPotionEffect(new MobEffect(MobEffectList.damageBoost.id, 999999, Math.min(this.getRNG().nextInt(Math.max((day - 32) / 128, 1)),1), true));
          }
 
          MonsterUtil.addDefaultArmor(day, this, false);
