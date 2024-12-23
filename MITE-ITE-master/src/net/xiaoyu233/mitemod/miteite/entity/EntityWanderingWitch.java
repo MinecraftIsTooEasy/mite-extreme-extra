@@ -157,7 +157,7 @@ public class EntityWanderingWitch extends EntityWitch {
 
                 for(int attempts = 0; attempts < batCounts; ++attempts) {
                     EntityBat bat = rand.nextInt(10) > 8 ? new EntityNightwing(this.worldObj) : new EntityGiantVampireBat(this.worldObj);
-                    bat.addPotionEffect(new MobEffect(MobEffectList.damageBoost.id,Integer.MAX_VALUE,1));
+                    bat.addPotionEffect(new MobEffect(MobEffectList.damageBoost.id,Integer.MAX_VALUE, 0));
                     bat.setSpawnedByWitch(true,this);
                     bat.setPosition(target_x,target_y,target_z);
                     this.worldObj.spawnEntityInWorld(bat);
