@@ -27,7 +27,7 @@ public class ForgingTableRecipes {
                 setHammerDurabilityCost(4096).
                 setTimeReq(60 * 20).
                 setQualityReward(EnumQuality.excellent).
-                addFaultFeedback(DowngradeFeedback.of(1)).
+//                addFaultFeedback(DowngradeFeedback.of(1)).
                 addFaultFeedback(DurabilityFeedback.of(DurabilityFeedback.Type.ofPercentage(5))).
                 addMaterials(new ItemStack(Items.ingotGold,1),
                         new ItemStack(Items.ingotMithril,1),
@@ -40,7 +40,7 @@ public class ForgingTableRecipes {
                 setHammerDurabilityCost(6144).
                 setTimeReq(70 * 20).
                 setQualityReward(EnumQuality.superb).
-                addFaultFeedback(DowngradeFeedback.of(1)).
+//                addFaultFeedback(DowngradeFeedback.of(1)).
                 addFaultFeedback(DurabilityFeedback.of(DurabilityFeedback.Type.ofPercentage(5))).
                 addMaterials(new ItemStack(Items.ingotGold,2),
                         new ItemStack(Items.ingotMithril,1),
@@ -53,7 +53,7 @@ public class ForgingTableRecipes {
                 setHammerDurabilityCost(6144).
                 setTimeReq(80 * 20).
                 setQualityReward(EnumQuality.superb).
-                addFaultFeedback(DowngradeFeedback.of(1)).
+//                addFaultFeedback(DowngradeFeedback.of(1)).
                 addFaultFeedback(DurabilityFeedback.of(DurabilityFeedback.Type.ofPercentage(5))).
                 addMaterials(new ItemStack(Items.ingotGold,2),
                         new ItemStack(Items.ingotMithril,2),
@@ -78,7 +78,7 @@ public class ForgingTableRecipes {
                     setHammerDurabilityCost(8192).
                     setTimeReq(90 * 20).
                     setQualityReward(EnumQuality.masterwork).
-                    addFaultFeedback(DowngradeFeedback.of(1)).
+//                    addFaultFeedback(DowngradeFeedback.of(1)).
                     addFaultFeedback(DurabilityFeedback.of(DurabilityFeedback.Type.ofPercentage(10))).
                     addMaterials(new ItemStack(Items.ghastTear,1),
                             new ItemStack(Items.ingotAdamantium,1),
@@ -91,7 +91,7 @@ public class ForgingTableRecipes {
                     setHammerDurabilityCost(10240).
                     setTimeReq(100 * 20).
                     setQualityReward(EnumQuality.masterwork).
-                    addFaultFeedback(DowngradeFeedback.of(1)).
+//                    addFaultFeedback(DowngradeFeedback.of(1)).
                     addFaultFeedback(DurabilityFeedback.of(DurabilityFeedback.Type.ofPercentage(10))).
                     addMaterials(new ItemStack(Items.ghastTear,2),
                             new ItemStack(Items.ingotAdamantium,1),
@@ -104,7 +104,7 @@ public class ForgingTableRecipes {
                     setHammerDurabilityCost(10240).
                     setTimeReq(110 * 20).
                     setQualityReward(EnumQuality.legendary).
-                    addFaultFeedback(DowngradeFeedback.of(1)).
+//                    addFaultFeedback(DowngradeFeedback.of(1)).
                     addFaultFeedback(DurabilityFeedback.of(DurabilityFeedback.Type.ofPercentage(10))).
                     addMaterials(new ItemStack(Items.ghastTear,2),
                             new ItemStack(Items.ingotAdamantium,2),
@@ -127,7 +127,7 @@ public class ForgingTableRecipes {
                 setHammerDurabilityCost(4096).
                 setTimeReq(60 * 20).
                 setQualityReward(EnumQuality.excellent).
-                addFaultFeedback(DowngradeFeedback.of(1)).
+//                addFaultFeedback(DowngradeFeedback.of(1)).
                 addFaultFeedback(DurabilityFeedback.of(DurabilityFeedback.Type.ofPercentage(5))).
                 addMaterials(new ItemStack(Items.ingotGold,1),
                         new ItemStack(Items.ingotMithril,1),
