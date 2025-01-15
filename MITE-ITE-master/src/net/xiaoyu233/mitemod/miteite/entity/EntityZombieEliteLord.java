@@ -4,7 +4,7 @@ import net.minecraft.*;
 import net.xiaoyu233.mitemod.miteite.item.Items;
 
 public class EntityZombieEliteLord extends EntityRevenant {
-    public static int[] spawnEntityList = new int[]{EntityTypes.getEntityID(EntityMinerZombie.class), EntityTypes.getEntityID(EntityGhoul.class), EntityTypes.getEntityID(EntityWight.class), EntityTypes.getEntityID(EntityShadow.class), EntityTypes.getEntityID(EntityRevenant.class)};
+    public static int[] spawnEntityList = new int[]{EntityTypes.getEntityID(EntityMinerZombie.class), EntityTypes.getEntityID(EntityGhoul.class), EntityTypes.getEntityID(EntityWight.class), EntityTypes.getEntityID(EntityRevenant.class)};
     private int spawnCounter;
 
     private int spawnSums;
@@ -52,7 +52,7 @@ public class EntityZombieEliteLord extends EntityRevenant {
             int day = this.getWorld().getDayOfOverworld();
             int diamond_count = (day / 32) >= 3 ? 3 : ((day / 32) + 1);
             for (int i1 = 0; i1 < diamond_count; i1++) {
-                this.dropItem(Item.ironNugget);
+                this.dropItem(Item.emerald);
             }
         }
     }

@@ -124,7 +124,7 @@ public class EntitySkeletonTrans extends EntityMonster implements IRangedEntity 
       if (world.isTheNether()) {
          return WITHER_SKELETON_ID;
       } else {
-         return (double)this.getRNG().nextFloat() < (this.isLongdead() ? 0.5D : 0.2d) ? MELEE_ATTACK_SKELETON_ID : ARROW_SKELETON_ID;
+         return (double)this.getRNG().nextFloat() < (this.isLongdead() ? 0.5D : 0.2d) ? (rand.nextFloat() < 0.2f ? WITHER_SKELETON_ID : MELEE_ATTACK_SKELETON_ID) : ARROW_SKELETON_ID;
       }
    }
 

@@ -150,13 +150,13 @@ public class BiomeDecoratorTrans {
    protected void genMinable(int frequency, WorldGenMinable world_gen_minable, boolean vein_size_increases_with_depth) {
       int resource_multiplier = 1;
       frequency *= resource_multiplier;
-//      if (this.currentWorld.underworld_y_offset != 0 && world_gen_minable != this.gravelGen) {
-//         if (world_gen_minable == this.adamantiteGen) {
-//            frequency *= 3;
-//         } else {
-//            frequency *= 4;
-//         }
-//      }
+      if (this.currentWorld.underworld_y_offset != 0 && world_gen_minable != this.gravelGen) {
+         if (world_gen_minable == this.adamantiteGen) {
+            frequency *= 3;
+         } else {
+            frequency *= 4;
+         }
+      }
       while(frequency-- > 0) {
          if (this.randomGenerator.nextInt(10) == 0) {
             int x = this.chunk_X + this.randomGenerator.nextInt(16);

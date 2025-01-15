@@ -177,6 +177,10 @@ public abstract class WorldServerTrans extends World {
                return entity_class;
             }
 
+            if (entity_class == EntityZombieFlyAway.class) {
+               return entity_class;
+            }
+
             if (entity_class == EntityInvisibleStalker.class) {
                if (!check_depth || y <= 40) {
                   return entity_class;

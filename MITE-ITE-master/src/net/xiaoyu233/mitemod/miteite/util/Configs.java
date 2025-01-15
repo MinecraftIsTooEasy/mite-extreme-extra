@@ -142,8 +142,8 @@ public class Configs {
         public static ConfigItem <Integer> fancyRedFrequencyUnderworld = new ConfigItem("fancyRedFrequencyUnderworld", 3, "地底世界红钻矿生成频率", 0 ,100);
         public static ConfigItem <Integer> adamantiumFrequencyUnderworld = new ConfigItem("adamantiumFrequencyUnderworld", 8, "地底世界艾德曼矿生成频率", 0 ,100);
         public static ConfigItem <Integer> underworldMantleBlockOffset = new ConfigItem("underworldMantleBlockOffset", 0, "地底世界地幔位置向上偏移", 0 ,140);
-        public static ConfigItem <Integer> netherAdamantiumMaxCountPerChunk = new ConfigItem("netherAdamantiumMaxCountPerChunk", 3, "地狱艾德曼每个区块最大生成数量", 0 ,100);
-        public static ConfigItem <Integer> netherAdamantiumMaxCountPerVein = new ConfigItem("netherAdamantiumMaxCountPerVein", 2, "地狱艾德曼每个矿脉最大矿物生成数量", 0 ,100);
+        public static ConfigItem <Integer> netherAdamantiumMaxCountPerChunk = new ConfigItem("netherAdamantiumMaxCountPerChunk", 6, "地狱艾德曼每个区块最大生成数量", 0 ,100);
+        public static ConfigItem <Integer> netherAdamantiumMaxCountPerVein = new ConfigItem("netherAdamantiumMaxCountPerVein", 3, "地狱艾德曼每个矿脉最大矿物生成数量", 0 ,100);
         public static ConfigItem <Integer> healthBarXOffset = new ConfigItem("healthBarXOffset", 0, "营养条GUI横向偏移");
         public static ConfigItem <Integer> healthBarYOffset = new ConfigItem("healthBarYOffset", 0, "营养条GUI纵向偏移");
         public static ConfigItem <Boolean> logPlayersInteractWithPortal = new ConfigItem("logPlayersInteractWithPortal", true, "玩家通过传送门时发送警告(开关)");

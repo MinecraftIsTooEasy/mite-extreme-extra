@@ -128,6 +128,7 @@ public class BiomeBaseTrans {
       this.spawnableMonsterList.add(new BiomeMeta(EntityMirrorSkeleton.class, 5,1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityMinerZombie.class, 2, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityZombieEliteLord.class, 2, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityZombieFlyAway.class, 2, 1, 1));
    }
 
    @Overwrite

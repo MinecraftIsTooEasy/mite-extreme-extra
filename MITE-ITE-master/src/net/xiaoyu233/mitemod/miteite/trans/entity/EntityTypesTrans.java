@@ -47,7 +47,10 @@ public class EntityTypesTrans {
       addMapping(EntityMirrorSkeleton.class, "EntityMirrorSkeleton", 210);
       addMapping(EntityMinerZombie.class, "EntityMinerZombie", 211);
       addMapping(EntityZombieEliteLord.class, "EntityZombieLongdead", 212);
-//      addMapping(EntityThunderMan.class, "EntityThunderMan", 209);
-
+      addMapping(EntityZombieFlyAway.class, "EntityZombieFlyAway", 213);
+      addMapping(EntitySkeletonFastArrow.class, "EntitySkeletonFastArrow", 214);
+      addMapping(EntityInvisibleCreeper.class, "EntityInvisibleCreeper", 215);
+      addMapping(EntityRunCreeper.class, "EntityRunCreeper", 216);
+      addMapping(EntityPhaseCreeper.class, "EntityPhaseCreeper", 217);
    }
 }
