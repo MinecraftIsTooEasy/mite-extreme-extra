@@ -5,6 +5,7 @@ import net.xiaoyu233.fml.util.ReflectHelper;
 import net.xiaoyu233.mitemod.miteite.block.Blocks;
 import net.xiaoyu233.mitemod.miteite.entity.*;
 import net.xiaoyu233.mitemod.miteite.trans.entity.EntityGiantZombieTrans;
+import net.xiaoyu233.mitemod.miteite.trans.entity.EntityZombieChaos;
 import net.xiaoyu233.mitemod.miteite.world.WorldGenBigTreeWithIDAndMeta;
 import net.xiaoyu233.mitemod.miteite.world.WorldGenTreesWithTreeId;
 import org.spongepowered.asm.mixin.Final;
@@ -128,7 +129,13 @@ public class BiomeBaseTrans {
       this.spawnableMonsterList.add(new BiomeMeta(EntityMirrorSkeleton.class, 5,1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityMinerZombie.class, 2, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityZombieEliteLord.class, 2, 1, 1));
-      this.spawnableMonsterList.add(new BiomeMeta(EntityZombieFlyAway.class, 2, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityPigZombie.class, 2, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityZombieFlyAway.class, 10, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityZombieChaos.class, 10, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityPhaseCreeper.class, 2, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityRunCreeper.class, 5, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityInvisibleCreeper.class, 5, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntitySkeletonFastArrow.class, 5, 1, 1));
    }
 
    @Overwrite

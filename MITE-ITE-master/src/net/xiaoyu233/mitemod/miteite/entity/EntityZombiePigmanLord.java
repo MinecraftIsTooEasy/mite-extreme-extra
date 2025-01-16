@@ -2,6 +2,8 @@ package net.xiaoyu233.mitemod.miteite.entity;
 
 import net.minecraft.*;
 import net.xiaoyu233.mitemod.miteite.item.Items;
+import net.xiaoyu233.mitemod.miteite.util.WorldUtil;
+import org.spongepowered.asm.mixin.Overwrite;
 
 public class EntityZombiePigmanLord extends EntityPigZombie {
     private int fx_counter;
@@ -51,6 +53,19 @@ public class EntityZombiePigmanLord extends EntityPigZombie {
                 this.dropItem(Item.diamond);
             }
         }
+    }
+
+    public boolean getCanSpawnHere(boolean perform_light_check) {
+        boolean before =  this.worldObj.difficultySetting > 0 && this.worldObj.checkNoEntityCollision(this.boundingBox) && this.worldObj.getCollidingBoundingBoxes(this, this.boundingBox).isEmpty() && !this.worldObj.isAnyLiquid(this.boundingBox);
+        boolean is_blood_moon_day = WorldUtil.isBloodMoonDay(this.worldObj.getTotalWorldTime()) && !this.worldObj.isBlueMoon(true);
+        if(this.worldObj.isOverworld()){
+            if(is_blood_moon_day){
+                return before;
+            } else {
+                return false;
+            }
+        }
+        return before;
     }
 
     @Override

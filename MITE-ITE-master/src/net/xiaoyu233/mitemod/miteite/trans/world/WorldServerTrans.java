@@ -118,6 +118,12 @@ public abstract class WorldServerTrans extends World {
 
          BiomeMeta entry = (BiomeMeta)WeightedRandom.getRandomItem(this.rand, possible_creatures);
          Class entity_class = entry.entityClass;
+         if (entity_class == EntityPigZombie.class) {
+            if (this.rand.nextInt(5) == 0) {
+               return EntityZombiePigmanLord.class;
+            }
+            return entity_class;
+         }
          if (entity_class == EntityCreeper.class) {
             if (!this.hasSkylight() || this.isDaytime() || this.rand.nextInt(4) == 0 || !this.isOutdoors(x, y, z)) {
                if(this.isUnderworld() && this.rand.nextInt(20) == 0) {
@@ -127,7 +133,7 @@ public abstract class WorldServerTrans extends World {
                }
                return entity_class;
             }
-         } else if (entity_class == EntitySlime.class) {
+         }else if (entity_class == EntitySlime.class) {
             if (!this.blockTypeIsAbove(Block.stone, x, y, z)) {
                return entity_class;
             }
@@ -156,9 +162,6 @@ public abstract class WorldServerTrans extends World {
                return entity_class;
             }
          } else {
-//            if (entity_class == EntityExchanger.class && Configs.wenscConfig.isSpawnExchanger.ConfigValue) {
-//               return entity_class;
-//            }
             if (entity_class == EntityMirrorSkeleton.class) {
                return entity_class;
             }
@@ -178,6 +181,18 @@ public abstract class WorldServerTrans extends World {
             }
 
             if (entity_class == EntityZombieFlyAway.class) {
+               return entity_class;
+            }
+            if (entity_class == EntityRunCreeper.class) {
+               return entity_class;
+            }
+            if (entity_class == EntityPhaseCreeper.class) {
+               return entity_class;
+            }
+            if (entity_class == EntityInvisibleCreeper.class) {
+               return entity_class;
+            }
+            if (entity_class == EntitySkeletonFastArrow.class) {
                return entity_class;
             }
 

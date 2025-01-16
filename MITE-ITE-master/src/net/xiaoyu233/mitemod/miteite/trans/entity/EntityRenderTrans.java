@@ -50,4 +50,6 @@ public class EntityRenderTrans {
             GL11.glRotatef((float)(var12 * 90), 0.0F, 1.0F, 0.0F);
         }
     }
+
+
 }

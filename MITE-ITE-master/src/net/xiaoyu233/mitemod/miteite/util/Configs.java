@@ -150,11 +150,11 @@ public class Configs {
         public static ConfigItem <Integer> underworldGateOpenDay = new ConfigItem("underworldGateOpenDay", 1, "地下世界传送门多少天可以打开(主世界天数)", 1 ,500);
         public static ConfigItem <Integer> netherGateOpenDay = new ConfigItem("netherGateOpenDay", 1, "地狱传送门多少天可以打开(主世界天数)", 1 ,500);
         public static ConfigItem <Boolean> isAfterDeathKeep = new ConfigItem("isAfterDeathKeep", false, "是否死亡不掉落");
-        public static ConfigItem <Boolean> isCloseShop = new ConfigItem("isCloseShop", true, "关闭商店系统");
+//        public static ConfigItem <Boolean> isCloseShop = new ConfigItem("isCloseShop", true, "关闭商店系统");
         public static ConfigItem <Float> plantGrowthRate = new ConfigItem("plantGrowthRate", 0.5F, "作物生长速度倍率",0f,1f);
         public static ConfigItem <Integer> whichDayGenVillage = new ConfigItem("whichDayGenVillage", 60, "多少天生成村庄", 1 ,500);
         public static ConfigItem <Integer> maxLevelLimit = new ConfigItem("maxLevelLimit", 300, "玩家最大限制等级", 0 ,1000);
-        public static ConfigItem <Integer> enhancePerLvlCostExp = new ConfigItem("enhancePerLvlCostExp", 100, "附魔书附魔每增加一级消耗多少经验", 0 ,10000);
+//        public static ConfigItem <Integer> enhancePerLvlCostExp = new ConfigItem("enhancePerLvlCostExp", 100, "附魔书附魔每增加一级消耗多少经验", 0 ,10000);
 
         public static ConfigItem <Float> zombieBossSpawnPercent = new ConfigItem("zombieBossSpawnPercent", 0.5f, "挖掘刷怪笼多大几率刷出僵尸BOSS", 0f,1f);
 
@@ -286,7 +286,7 @@ public class Configs {
         wenscMap.put("plantGrowthRate", wenscConfig.plantGrowthRate);
         wenscMap.put("whichDayGenVillage", wenscConfig.whichDayGenVillage);
         wenscMap.put("maxLevelLimit", wenscConfig.maxLevelLimit);
-        wenscMap.put("enhancePerLvlCostExp", wenscConfig.enhancePerLvlCostExp);
+//        wenscMap.put("enhancePerLvlCostExp", wenscConfig.enhancePerLvlCostExp);
         wenscMap.put("zombieBossSpawnPercent", wenscConfig.zombieBossSpawnPercent);
         wenscMap.put("creeperFuseTime", wenscConfig.creeperFuseTime);
         wenscMap.put("skeletonRideBat", wenscConfig.skeletonRideBat);

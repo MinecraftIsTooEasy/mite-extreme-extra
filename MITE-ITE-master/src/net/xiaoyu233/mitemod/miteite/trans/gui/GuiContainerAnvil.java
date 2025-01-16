@@ -48,7 +48,7 @@ public class GuiContainerAnvil extends awy implements ICrafting {
             ItemStack var2 = this.u.getSlot(1).getStack();
             if(var2.getItem() instanceof ItemEnchantedBook) {
                 if(!this.player.isOp()) {
-                    int expSums = (var1.getEnhanceTotalLevel() + var2.getEnhanceTotalLevel()) * Configs.wenscConfig.enhancePerLvlCostExp.ConfigValue;
+                    int expSums = 8000;
                     if(this.player.experience < expSums) {
                         this.o.b(LocaleI18n.translateToLocal("gui.containerAnvil.needXp") + ":" + expSums, 93, 70, 16720896);
                     } else {

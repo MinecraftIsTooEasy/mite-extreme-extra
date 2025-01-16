@@ -3,6 +3,7 @@ package net.xiaoyu233.mitemod.miteite.trans.entity;
 import net.minecraft.*;
 import net.minecraft.server.MinecraftServer;
 import net.xiaoyu233.mitemod.miteite.util.Configs;
+import net.xiaoyu233.mitemod.miteite.util.WorldUtil;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -54,6 +55,30 @@ public abstract class EntityZombiePigmanTrans extends EntityZombie implements IR
         this.setEntityAttribute(GenericAttributes.followRange, 64.0D);
         this.setEntityAttribute(GenericAttributes.movementSpeed, 0.5D);
         this.setEntityAttribute(EntityZombie.field_110186_bp, this.rand.nextDouble() * 0.10000000149011612D);
+   }
+
+//    @Override
+//    public boolean getCanSpawnHere(boolean perform_light_check) {
+//        Boolean before=  super.getCanSpawnHere(perform_light_check);
+//        if(before  && this.worldObj.getDayOfOverworld() > 32) {
+//            return true;
+//        } else{
+//            return false;
+//        }
+//    }
+
+    @Overwrite
+    public boolean getCanSpawnHere(boolean perform_light_check) {
+        boolean before =  this.worldObj.difficultySetting > 0 && this.worldObj.checkNoEntityCollision(this.boundingBox) && this.worldObj.getCollidingBoundingBoxes(this, this.boundingBox).isEmpty() && !this.worldObj.isAnyLiquid(this.boundingBox);
+        boolean is_blood_moon_day = WorldUtil.isBloodMoonDay(this.worldObj.getTotalWorldTime()) && !this.worldObj.isBlueMoon(true);
+        if(this.worldObj.isOverworld()){
+            if(is_blood_moon_day){
+                return before;
+            } else {
+                return false;
+            }
+        }
+        return before;
    }
 
     @Overwrite

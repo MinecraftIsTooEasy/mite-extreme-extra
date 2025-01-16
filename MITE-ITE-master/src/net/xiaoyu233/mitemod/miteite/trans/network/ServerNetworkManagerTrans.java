@@ -51,34 +51,34 @@ public class ServerNetworkManagerTrans extends NetworkManagerTrans {
       }
    }
 
-   @Inject(method = "handleCustomPayload", at = @At("HEAD"))
-   public void handleCustomPayload(Packet250CustomPayload par1Packet250CustomPayload, CallbackInfo callbackInfo) {
-      DataInputStream var2;
-      int var14;
-      if ("MC|OpenShopGUI".equals(par1Packet250CustomPayload.channel)) {
-         try {
-            var2 = new DataInputStream(new ByteArrayInputStream(par1Packet250CustomPayload.data));
-            boolean isOpen = var2.readBoolean();
-            if(!Configs.wenscConfig.isCloseShop.ConfigValue) {
-               this.playerEntity.displayGUIShop();
-               this.playerEntity.triggerAchievement(Achievements.openShop);
-            }
-         } catch (Exception var12) {
-            var12.printStackTrace();
-         }
-      }
-      if ("MC|ShopPageIndex".equals(par1Packet250CustomPayload.channel)) {
-         try {
-            var2 = new DataInputStream(new ByteArrayInputStream(par1Packet250CustomPayload.data));
-            var14 = var2.readInt();
-            Container var16 = this.playerEntity.openContainer;
-            if (var16 instanceof ContainerShop) {
-               ((ContainerShop)var16).inventory.pageIndex = var14;
-               ((ContainerShop)var16).inventory.initItemList();
-            }
-         } catch (Exception var12) {
-            var12.printStackTrace();
-         }
-      }
-   }
+//   @Inject(method = "handleCustomPayload", at = @At("HEAD"))
+//   public void handleCustomPayload(Packet250CustomPayload par1Packet250CustomPayload, CallbackInfo callbackInfo) {
+//      DataInputStream var2;
+//      int var14;
+//      if ("MC|OpenShopGUI".equals(par1Packet250CustomPayload.channel)) {
+//         try {
+//            var2 = new DataInputStream(new ByteArrayInputStream(par1Packet250CustomPayload.data));
+//            boolean isOpen = var2.readBoolean();
+//            if(!Configs.wenscConfig.isCloseShop.ConfigValue) {
+//               this.playerEntity.displayGUIShop();
+//               this.playerEntity.triggerAchievement(Achievements.openShop);
+//            }
+//         } catch (Exception var12) {
+//            var12.printStackTrace();
+//         }
+//      }
+//      if ("MC|ShopPageIndex".equals(par1Packet250CustomPayload.channel)) {
+//         try {
+//            var2 = new DataInputStream(new ByteArrayInputStream(par1Packet250CustomPayload.data));
+//            var14 = var2.readInt();
+//            Container var16 = this.playerEntity.openContainer;
+//            if (var16 instanceof ContainerShop) {
+//               ((ContainerShop)var16).inventory.pageIndex = var14;
+//               ((ContainerShop)var16).inventory.initItemList();
+//            }
+//         } catch (Exception var12) {
+//            var12.printStackTrace();
+//         }
+//      }
+//   }
 }

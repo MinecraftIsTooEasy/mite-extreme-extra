@@ -51,7 +51,7 @@ public class ContainerAnvilTrans extends Container {
         ItemStack var1 = this.inputSlots.getStackInSlot(0);
         ItemStack var2 = this.inputSlots.getStackInSlot(1);
         if(var1 != null && var2 != null) {
-            if(!this.player.isOp() && this.player.experience < (var1.getEnhanceTotalLevel() + var2.getEnhanceTotalLevel()) * Configs.wenscConfig.enhancePerLvlCostExp.ConfigValue) {
+            if(!this.player.isOp() && this.player.experience < 8000) {
                 return true;
             } else {
                 return false;

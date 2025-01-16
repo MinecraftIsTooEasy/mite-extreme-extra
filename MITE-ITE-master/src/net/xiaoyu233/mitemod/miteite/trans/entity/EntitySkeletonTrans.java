@@ -8,6 +8,7 @@ import net.xiaoyu233.mitemod.miteite.item.enchantment.Enchantments;
 import net.xiaoyu233.mitemod.miteite.util.Configs;
 import net.xiaoyu233.mitemod.miteite.util.Constant;
 import net.xiaoyu233.mitemod.miteite.util.MonsterUtil;
+import net.xiaoyu233.mitemod.miteite.util.WorldUtil;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -124,6 +125,10 @@ public class EntitySkeletonTrans extends EntityMonster implements IRangedEntity 
       if (world.isTheNether()) {
          return WITHER_SKELETON_ID;
       } else {
+         boolean is_blood_moon_day = WorldUtil.isBloodMoonDay(world.getTotalWorldTime()) && !world.isBlueMoon(true);
+         if(is_blood_moon_day && rand.nextFloat() < 0.2f && world.isOverworld()){
+            return WITHER_SKELETON_ID;
+         }
          return (double)this.getRNG().nextFloat() < (this.isLongdead() ? 0.5D : 0.2d) ? (rand.nextFloat() < 0.2f ? WITHER_SKELETON_ID : MELEE_ATTACK_SKELETON_ID) : ARROW_SKELETON_ID;
       }
    }

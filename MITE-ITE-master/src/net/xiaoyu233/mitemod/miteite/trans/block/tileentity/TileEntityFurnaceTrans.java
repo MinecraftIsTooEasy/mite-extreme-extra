@@ -1,6 +1,7 @@
 package net.xiaoyu233.mitemod.miteite.trans.block.tileentity;
 
 import net.minecraft.*;
+import net.xiaoyu233.mitemod.miteite.block.BlockFurnaceVibranium;
 import net.xiaoyu233.mitemod.miteite.block.Blocks;
 import net.xiaoyu233.mitemod.miteite.util.Configs;
 import org.spongepowered.asm.mixin.Mixin;
@@ -8,7 +9,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(TileEntityFurnace.class)
-public class TileEntityFurnaceTrans extends TileEntity {
+public abstract class TileEntityFurnaceTrans extends TileEntity {
    @Shadow
    private final ItemStack[] furnaceItemStacks = new ItemStack[3];
    @Shadow
@@ -95,6 +96,8 @@ public class TileEntityFurnaceTrans extends TileEntity {
       return false;
    }
 
+   @Shadow public abstract BlockFurnace getFurnaceBlock();
+
    @Overwrite
    public void smeltItem(int heat_level) {
       if (this.canSmelt(heat_level)) {
@@ -126,6 +129,17 @@ public class TileEntityFurnaceTrans extends TileEntity {
             var10000.stackSize += extra_converted;
             var10000 = this.getInputItemStack();
             var10000.stackSize -= extra_converted;
+         }
+         // 振金熔炉有5%概率让矿物双倍熔炼
+         if(this.getFurnaceBlock() instanceof BlockFurnaceVibranium) {
+            if(worldObj.rand.nextFloat() < 0.05f) {
+               int extra_converted = Math.min(this.getOutputItemStack().getMaxStackSize() - this.getOutputItemStack().stackSize, this.getOutputItemStack().stackSize);
+               if (extra_converted > 1) {
+                  extra_converted = 1;
+               }
+               var10000 = this.getOutputItemStack();
+               var10000.stackSize += extra_converted;
+            }
          }
 
          if (this.furnaceItemStacks[0].stackSize <= 0) {
