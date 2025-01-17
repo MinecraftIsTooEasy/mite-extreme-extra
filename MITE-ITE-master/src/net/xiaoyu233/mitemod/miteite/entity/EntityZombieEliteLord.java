@@ -72,6 +72,7 @@ public class EntityZombieEliteLord extends EntityRevenant {
                             EntityMonster entityMonster = (EntityMonster) entity;
                             entityMonster.setPosition(this.posX, this.posY, this.posZ);
                             entityMonster.refreshDespawnCounter(-9600);
+                            entityMonster.addPotionEffect(new MobEffect(MobEffectList.damageBoost.id, 2147483647, 0));
                             this.worldObj.spawnEntityInWorld(entity);
                             entityMonster.onSpawnWithEgg(null);
                             entityMonster.setAttackTarget(this.getTarget());

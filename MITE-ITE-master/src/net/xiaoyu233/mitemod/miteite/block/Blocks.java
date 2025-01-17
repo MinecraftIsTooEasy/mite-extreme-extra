@@ -89,6 +89,8 @@ public class Blocks extends Block{
     public static final Block stairsMaple = (new BlockStairs1(273, planks, 4)).setUnlocalizedName("stairsMaple");
     public static final Block stairsCherry = (new BlockStairs1(274, planks, 5)).setUnlocalizedName("stairsCherry");
 
+    public static final BlockEnhanceToolLevelUp blockEnhanceToolLevelUp = (new BlockEnhanceToolLevelUp(275, Material.stone, new BlockConstants()));
+
     static {
         try {
             Field field = Block.class.getDeclaredField("is_normal_cube_lookup");
@@ -150,6 +152,7 @@ public class Blocks extends Block{
         registerItemBlock(blockColorfulBrick, "colorful_brick");
         registerItemBlock(blockLantern, "block_lantern");
 
+
         registerItemBlock(blockStairsColorful0, "colorful_stair");
         registerItemBlock(blockStairsColorful1, "colorful_stair");
         registerItemBlock(blockStairsColorful2, "colorful_stair");
@@ -185,6 +188,8 @@ public class Blocks extends Block{
         registerItemBlock(wood1, (new ItemMultiTexture(wood1, wood1.getNames())).setUnlocalizedName("log1"));
         registerItemBlock(leaves1, (new ItemLeaves1(leaves1)).setUnlocalizedName("leaves1"));
         registerItemBlock(sapling1, (new ItemMultiTexture(sapling1, BlockSapling1.WOOD_TYPES)).setUnlocalizedName("sapling1"));
+
+        registerItemBlock(blockEnhanceToolLevelUp, "block_enhance_levelup");
     }
 
     private static void registerItemBlock(Block block,String resourceLocation){

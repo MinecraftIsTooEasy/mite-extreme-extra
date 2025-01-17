@@ -52,5 +52,6 @@ public class EntityTypesTrans {
       addMapping(EntityInvisibleCreeper.class, "EntityInvisibleCreeper", 215);
       addMapping(EntityRunCreeper.class, "EntityRunCreeper", 216);
       addMapping(EntityPhaseCreeper.class, "EntityPhaseCreeper", 217);
+      addMapping(EntityZombieChaos.class, "EntityZombieChaos", 218);
    }
 }

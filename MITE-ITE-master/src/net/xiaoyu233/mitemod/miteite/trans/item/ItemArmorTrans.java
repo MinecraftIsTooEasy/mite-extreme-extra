@@ -125,9 +125,13 @@ public abstract class ItemArmorTrans extends Item implements IDamageableItem, IU
 
          if (extended_info) {
             info.add("§5宝石:");
-            info.add(" §3护甲增加:§6" + ItemStack.field_111284_a.format(itemStack.getGemMaxNumeric(GemModifierTypes.protection)));
-            info.add(" §3生命增加:§6" + ItemStack.field_111284_a.format(itemStack.getGemMaxNumeric(GemModifierTypes.health)));
-            info.add(" §3恢复增加:§6" + ItemStack.field_111284_a.format(itemStack.getGemMaxNumeric(GemModifierTypes.recover)));
+            info.add("  §3护甲增加:§6" + ItemStack.field_111284_a.format(itemStack.getGemMaxNumeric(GemModifierTypes.protection)));
+            info.add("  §3生命增加:§6" + ItemStack.field_111284_a.format(itemStack.getGemMaxNumeric(GemModifierTypes.health)));
+            info.add("  §3恢复增加:§6" + ItemStack.field_111284_a.format(itemStack.getGemMaxNumeric(GemModifierTypes.recover)));
+            info.add("  §3耐久增加:§6" + ItemStack.field_111284_a.format(itemStack.getGemMaxNumeric(GemModifierTypes.durable)));
+            if(ReflectHelper.dyCast(this) instanceof ItemBoots)  {
+               info.add("  §3速度增加:§6" + ItemStack.field_111284_a.format(itemStack.getGemMaxNumeric(GemModifierTypes.speed)));
+            }
             NBTTagCompound compound = itemStack.stackTagCompound.getCompoundTag("modifiers");
             if (!compound.hasNoTags()) {
                info.add("装备强化:");

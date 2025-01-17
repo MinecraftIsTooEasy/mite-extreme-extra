@@ -1,4 +1,4 @@
-package net.xiaoyu233.mitemod.miteite.trans.entity;
+package net.xiaoyu233.mitemod.miteite.entity;
 
 import net.minecraft.*;
 

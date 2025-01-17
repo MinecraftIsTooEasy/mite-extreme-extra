@@ -9,7 +9,10 @@ public enum GemModifierTypes{
     damage("damage", "White"),
     health("health", "Red"),
     protection("protection", "Purple"),
-    recover("recover", "Aquamarine");
+    recover("recover", "Aquamarine"),
+    effect("effect", "Green"),
+    durable("durable", "Black"),
+    speed("speed", "Gold");
     public String gemName;
     public String iconName;
 

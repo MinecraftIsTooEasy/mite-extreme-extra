@@ -48,6 +48,18 @@ public class ItemStackTrans {
       this.setItemSubtype(subtype);
    }
 
+   @Shadow
+   public float getEnchantmentLevelFraction(Enchantment enchantment) {
+      return 0f;
+   }
+
+   @Redirect(method = "tryDamageItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/ItemStack;getEnchantmentLevelFraction(Lnet/minecraft/Enchantment;)F"))
+   public float getEnchantmentLevelFractionExtra(ItemStack itemStack, Enchantment enchantment) {
+      // 获取耐久度 本身耐久附魔达到5/5时有0.75概率掉耐久 此处额外增加0-0.3的宝石耐久几率
+      float fraction_of_unbreaking = itemStack.getEnchantmentLevelFraction(Enchantment.unbreaking) + itemStack.getGemMaxNumeric(GemModifierTypes.durable) * 0.05f;
+      return fraction_of_unbreaking;
+   }
+
    // 重复附魔的问题，书可以附魔的问题
    @Inject(method = "isEnchantable", at = @At("HEAD"), cancellable = true)
    public void isEnchantable(CallbackInfoReturnable callbackInfoReturnable) {
@@ -124,10 +136,12 @@ public class ItemStackTrans {
          this.toolNbtFixed = true;
          if (this.stackTagCompound == null) {
             this.setTagCompound(new NBTTagCompound());
+            this.stackTagCompound.setInteger("enhance_times", 0);
             this.stackTagCompound.setInteger("tool_level", 0);
             this.stackTagCompound.setInteger("tool_exp", 0);
             this.stackTagCompound.setCompoundTag("modifiers", new NBTTagCompound());
          } else if (!this.stackTagCompound.hasKey("tool_level")) {
+            this.stackTagCompound.setInteger("enhance_times", 0);
             this.stackTagCompound.setInteger("tool_level", 0);
             this.stackTagCompound.setInteger("tool_exp", 0);
             this.stackTagCompound.setCompoundTag("modifiers", new NBTTagCompound());
@@ -375,6 +389,7 @@ public class ItemStackTrans {
 
          if (this.getItem().hasExpAndLevel() && this.stackTagCompound == null) {
             NBTTagCompound tagCompound = new NBTTagCompound();
+            tagCompound.setInteger("enhance_times", 0);
             tagCompound.setInteger("tool_level", 0);
             tagCompound.setInteger("tool_exp", 0);
             tagCompound.setCompoundTag("modifiers", new NBTTagCompound());
@@ -508,6 +523,7 @@ public class ItemStackTrans {
          par1NBTTagCompound.setCompoundTag("tag", effective_stackTagCompound);
       } else if (this.getItem().hasExpAndLevel()) {
          effective_stackTagCompound = new NBTTagCompound();
+         effective_stackTagCompound.setInteger("enhance_times", 0);
          effective_stackTagCompound.setInteger("tool_level", 0);
          effective_stackTagCompound.setInteger("tool_exp", 0);
          effective_stackTagCompound.setCompoundTag("modifiers", new NBTTagCompound());

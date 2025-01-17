@@ -111,6 +111,13 @@ entity.EntityExchanger.name=转移骷髅
 entity.EntityZombieBoss.name=僵尸BOSS
 entity.EntityMinerZombie.name=矿工僵尸
 entity.EntityZombieLongdead.name=僵尸精英领主
+entity.EntityZombieLongdead.name=僵尸精英领主
+entity.EntityZombieChaos.name=混乱僵尸
+entity.EntityZombieFlyAway.name=大力士僵尸
+entity.EntitySkeletonFastArrow.name=速射手骷髅
+entity.EntityRunCreeper.name=疾跑苦力怕
+entity.EntityPhaseCreeper.name=相位苦力怕
+entity.EntityInvisibleCreeper.name=隐形苦力怕
 
 gui.forgingTable.start=开始锻造
 gui.forgingTable.item_req=锻造需要
@@ -149,6 +156,7 @@ tile.colorful_brick.name=彩石石砖
 tile.colorful_stair.name=彩石楼梯
 tile.block_lantern.name=灯笼
 tile.block_spawn.name=复活传送阵
+tile.block_enhance_levelup.name=磨具
 item.stack_torch.name=一捆火把
 item.gem_blue.name=蓝宝石
 item.lava_in_pipes.name=管道岩浆
@@ -178,31 +186,49 @@ item.enhance_gem_phase1.damage.name=三角攻击宝石
 item.enhance_gem_phase1.protection.name=三角保护宝石
 item.enhance_gem_phase1.health.name=三角生命宝石
 item.enhance_gem_phase1.recover.name=三角恢复宝石
+item.enhance_gem_phase1.effect.name=三角效率宝石
+item.enhance_gem_phase1.durable.name=三角耐久宝石
+item.enhance_gem_phase1.speed.name=三角速度宝石
 
 item.enhance_gem_phase2.damage.name=四角攻击宝石
 item.enhance_gem_phase2.protection.name=四角保护宝石
 item.enhance_gem_phase2.health.name=四角生命宝石
 item.enhance_gem_phase2.recover.name=四角恢复宝石
+item.enhance_gem_phase2.effect.name=四角效率宝石
+item.enhance_gem_phase2.durable.name=四角耐久宝石
+item.enhance_gem_phase2.speed.name=四角速度宝石
 
 item.enhance_gem_phase3.damage.name=五角攻击宝石
 item.enhance_gem_phase3.protection.name=五角保护宝石
 item.enhance_gem_phase3.health.name=五角生命宝石
 item.enhance_gem_phase3.recover.name=五角恢复宝石
+item.enhance_gem_phase3.effect.name=五角效率宝石
+item.enhance_gem_phase3.durable.name=五角耐久宝石
+item.enhance_gem_phase3.speed.name=五角速度宝石
 
 item.enhance_gem_phase4.damage.name=六角攻击宝石
 item.enhance_gem_phase4.protection.name=六角保护宝石
 item.enhance_gem_phase4.health.name=六角生命宝石
 item.enhance_gem_phase4.recover.name=六角恢复宝石
+item.enhance_gem_phase4.effect.name=六角效率宝石
+item.enhance_gem_phase4.durable.name=六角耐久宝石
+item.enhance_gem_phase4.speed.name=六角速度宝石
 
 item.enhance_gem_phase5.damage.name=七角攻击宝石
 item.enhance_gem_phase5.protection.name=七角保护宝石
 item.enhance_gem_phase5.health.name=七角生命宝石
 item.enhance_gem_phase5.recover.name=七角恢复宝石
+item.enhance_gem_phase5.effect.name=七角效率宝石
+item.enhance_gem_phase5.durable.name=七角耐久宝石
+item.enhance_gem_phase5.speed.name=七角速度宝石
 
 item.enhance_gem_phase6.damage.name=八角攻击宝石
 item.enhance_gem_phase6.protection.name=八角保护宝石
 item.enhance_gem_phase6.health.name=八角生命宝石
 item.enhance_gem_phase6.recover.name=八角恢复宝石
+item.enhance_gem_phase6.effect.name=八角效率宝石
+item.enhance_gem_phase6.durable.name=八角耐久宝石
+item.enhance_gem_phase6.speed.name=八角速度宝石
 
 item.gem_shard_0.name=朴素四角宝石
 item.gem_shard_1.name=朴素五角宝石

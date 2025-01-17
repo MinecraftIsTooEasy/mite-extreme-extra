@@ -86,7 +86,11 @@ public class ItemToolTrans extends Item implements IUpgradableItem {
 
          if (extended_info) {
             info.add("§5宝石:");
-            info.add(" §3攻击增加:§6" + ItemStack.field_111284_a.format(item_stack.getGemMaxNumeric(GemModifierTypes.damage)));
+            info.add("  §3攻击增加:§6" + ItemStack.field_111284_a.format(item_stack.getGemMaxNumeric(GemModifierTypes.damage)));
+            info.add("  §3耐久增加:§6" + ItemStack.field_111284_a.format(item_stack.getGemMaxNumeric(GemModifierTypes.durable)));
+            if(!isWeapon(ReflectHelper.dyCast(this))) {
+               info.add("  §3效率增加:§6" + ItemStack.field_111284_a.format(item_stack.getGemMaxNumeric(GemModifierTypes.effect)));
+            }
             NBTTagCompound compound = item_stack.stackTagCompound.getCompoundTag("modifiers");
             if (!compound.hasNoTags()) {
                info.add("工具强化:");
@@ -308,7 +312,6 @@ public class ItemToolTrans extends Item implements IUpgradableItem {
             player.sendChatToPlayer(ChatMessage.createFromTranslationKey("你的" + stack.getMITEStyleDisplayName() + "获得了" + modifierType.color.toString() + modifierType.displayName + "§r属性"));
          }
       }
-
    }
 
    //Client+Server

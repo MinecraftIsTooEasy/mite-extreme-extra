@@ -936,6 +936,15 @@ public abstract class EntityPlayerTrans extends EntityLiving implements ICommand
       return aquaAffinityModifier || waterLike;
    }
 
+   @Redirect(method = "getCurrentPlayerStrVsBlock",  at = @At(value = "INVOKE", target = "Lnet/minecraft/EnchantmentManager;getEfficiencyModifier(Lnet/minecraft/EntityLiving;)I"))
+   public int redirectGetEfficiencyModifier(EntityLiving par0EntityLivingBase){
+      int var4 = EnchantmentManager.getEfficiencyModifier(par0EntityLivingBase);
+      if(this.getHeldItemStack() != null){
+         var4 += this.getHeldItemStack().getGemMaxLevel(GemModifierTypes.effect);
+      }
+      return  var4;
+   }
+
    @Redirect(method = "attackEntityFrom",
            at = @At(value = "INVOKE",
                    target = "Lnet/minecraft/EntityLiving;attackEntityFrom(Lnet/minecraft/Damage;)Lnet/minecraft/EntityDamageResult;"))

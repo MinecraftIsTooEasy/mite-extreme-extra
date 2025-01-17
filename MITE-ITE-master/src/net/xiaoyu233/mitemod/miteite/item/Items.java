@@ -404,5 +404,12 @@ public class Items extends Item{
 
         register.registerShapedRecipe(new ItemStack(Block.woodSingleSlab, 6, 5), true, new Object[] {"###", '#', new ItemStack(Block.planks, 1, 5)});
         register.registerShapedRecipe(new ItemStack(Blocks.stairsCherry, 4), true,"#  ", "## ", "###", '#', new ItemStack(Block.planks, 1, 5));
+        register.registerShapedRecipe(new ItemStack(Blocks.blockEnhanceToolLevelUp),
+                true,
+                "AAA",
+                "ABA",
+                "AAA",
+                'A', Items.ingotMithril,
+                'B', Items.fancyRed);
     }
 }
