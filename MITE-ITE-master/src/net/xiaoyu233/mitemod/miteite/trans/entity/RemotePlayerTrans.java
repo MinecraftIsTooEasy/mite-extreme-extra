@@ -19,7 +19,6 @@ public abstract class RemotePlayerTrans extends bex {
    private int protein;
    @Shadow
    private int tournament_score;
-   private boolean forceZoom = false;
 
    public RemotePlayerTrans(Minecraft par1Minecraft, World par2World, PlayerNameSession par3Session, NetClientHandler par4NetClientHandler) {
       super(par1Minecraft, par2World, par3Session, 0);
@@ -50,18 +49,5 @@ public abstract class RemotePlayerTrans extends bex {
 
    public void setProtein(int protein) {
       this.protein = protein;
-   }
-
-   @Inject(method = "onUpdate", at = @At("RETURN"))
-   public void onUpdate(CallbackInfo ci) {
-      if(this.isPotionActive(MobEffectList.field_76442_z)){
-         this.zoomed = true;
-         this.forceZoom = true;
-      } else {
-         if(this.forceZoom){
-            this.zoomed = false;
-            this.forceZoom = false;
-         }
-      }
    }
 }

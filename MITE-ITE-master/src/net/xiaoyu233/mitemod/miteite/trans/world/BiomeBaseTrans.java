@@ -115,6 +115,7 @@ public class BiomeBaseTrans {
       this.spawnableMonsterList.add(new BiomeMeta(EntityClayGolem.class, 50, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityBoneLord.class, 5, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityPhaseSpider.class, 5, 1, 4));
+
    }
 
    @Inject(method = "<init>",at = @At("RETURN"))
@@ -135,6 +136,8 @@ public class BiomeBaseTrans {
       this.spawnableMonsterList.add(new BiomeMeta(EntityRunCreeper.class, 5, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityInvisibleCreeper.class, 5, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntitySkeletonFastArrow.class, 5, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityExchanger.class, 5, 1, 1));
+
    }
 
    @Overwrite

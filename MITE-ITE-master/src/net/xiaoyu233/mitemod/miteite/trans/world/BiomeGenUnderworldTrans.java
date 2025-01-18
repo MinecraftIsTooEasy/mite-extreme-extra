@@ -25,9 +25,14 @@ public class BiomeGenUnderworldTrans extends BiomeBase {
       this.spawnableMonsterList.add(new BiomeMeta(EntityZombieLord.class, 2, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityZombieDoor.class, 2, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityAnnihilationSkeleton.class, 2, 1, 1));
-//      this.spawnableMonsterList.add(new BiomeMeta(EntityThunderMan.class, 1, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityWanderingWitch.class, 1, 1, 1));
       this.spawnableMonsterList.add(new BiomeMeta(EntityHellhound.class, 15, 1, 2));
-//      this.spawnableMonsterList.add(new BiomeMeta(EntityExchanger.class, 5,1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityExchanger.class, 5,1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntitySkeletonFastArrow.class, 5,1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityZombieFlyAway.class, 10, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityZombieChaos.class, 10, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityPhaseCreeper.class, 2, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityRunCreeper.class, 5, 1, 1));
+      this.spawnableMonsterList.add(new BiomeMeta(EntityInvisibleCreeper.class, 5, 1, 1));
    }
 }

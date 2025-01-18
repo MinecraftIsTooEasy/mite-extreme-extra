@@ -12,7 +12,7 @@ public class EntityZombieFlyAway extends EntityZombie {
         int day = this.worldObj.getDayOfWorld();
         EntityDamageResult result  = super.attackEntityAsMob(target);
         if(result != null) {
-            target.motionY += Math.min(0.5d + Math.floor((double) day / 32d) * 0.1d, 1d);
+            target.motionY += Math.min(1d + Math.floor((double) day / 32d) * 0.2d, 2d);
         }
         return result;
     }

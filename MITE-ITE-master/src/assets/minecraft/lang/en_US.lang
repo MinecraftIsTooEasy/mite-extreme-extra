@@ -189,6 +189,8 @@ item.enhance_gem_phase1.recover.name=三角恢复宝石
 item.enhance_gem_phase1.effect.name=三角效率宝石
 item.enhance_gem_phase1.durable.name=三角耐久宝石
 item.enhance_gem_phase1.speed.name=三角速度宝石
+item.enhance_gem_phase1.fireproof.name=三角防火宝石
+item.enhance_gem_phase1.explosionProof.name=三角防爆宝石
 
 item.enhance_gem_phase2.damage.name=四角攻击宝石
 item.enhance_gem_phase2.protection.name=四角保护宝石
@@ -197,6 +199,8 @@ item.enhance_gem_phase2.recover.name=四角恢复宝石
 item.enhance_gem_phase2.effect.name=四角效率宝石
 item.enhance_gem_phase2.durable.name=四角耐久宝石
 item.enhance_gem_phase2.speed.name=四角速度宝石
+item.enhance_gem_phase2.fireproof.name=四角防火宝石
+item.enhance_gem_phase2.explosionProof.name=四角防爆宝石
 
 item.enhance_gem_phase3.damage.name=五角攻击宝石
 item.enhance_gem_phase3.protection.name=五角保护宝石
@@ -205,6 +209,8 @@ item.enhance_gem_phase3.recover.name=五角恢复宝石
 item.enhance_gem_phase3.effect.name=五角效率宝石
 item.enhance_gem_phase3.durable.name=五角耐久宝石
 item.enhance_gem_phase3.speed.name=五角速度宝石
+item.enhance_gem_phase3.fireproof.name=五角防火宝石
+item.enhance_gem_phase3.explosionProof.name=五角防爆宝石
 
 item.enhance_gem_phase4.damage.name=六角攻击宝石
 item.enhance_gem_phase4.protection.name=六角保护宝石
@@ -213,6 +219,8 @@ item.enhance_gem_phase4.recover.name=六角恢复宝石
 item.enhance_gem_phase4.effect.name=六角效率宝石
 item.enhance_gem_phase4.durable.name=六角耐久宝石
 item.enhance_gem_phase4.speed.name=六角速度宝石
+item.enhance_gem_phase4.fireproof.name=六角防火宝石
+item.enhance_gem_phase4.explosionProof.name=六角防爆宝石
 
 item.enhance_gem_phase5.damage.name=七角攻击宝石
 item.enhance_gem_phase5.protection.name=七角保护宝石
@@ -221,6 +229,8 @@ item.enhance_gem_phase5.recover.name=七角恢复宝石
 item.enhance_gem_phase5.effect.name=七角效率宝石
 item.enhance_gem_phase5.durable.name=七角耐久宝石
 item.enhance_gem_phase5.speed.name=七角速度宝石
+item.enhance_gem_phase5.fireproof.name=七角防火宝石
+item.enhance_gem_phase5.explosionProof.name=七角防爆宝石
 
 item.enhance_gem_phase6.damage.name=八角攻击宝石
 item.enhance_gem_phase6.protection.name=八角保护宝石
@@ -229,6 +239,8 @@ item.enhance_gem_phase6.recover.name=八角恢复宝石
 item.enhance_gem_phase6.effect.name=八角效率宝石
 item.enhance_gem_phase6.durable.name=八角耐久宝石
 item.enhance_gem_phase6.speed.name=八角速度宝石
+item.enhance_gem_phase6.fireproof.name=八角防火宝石
+item.enhance_gem_phase6.explosionProof.name=八角防爆宝石
 
 item.gem_shard_0.name=朴素四角宝石
 item.gem_shard_1.name=朴素五角宝石

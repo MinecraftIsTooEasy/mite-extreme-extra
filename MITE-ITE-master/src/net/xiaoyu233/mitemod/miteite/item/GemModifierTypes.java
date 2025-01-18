@@ -12,7 +12,9 @@ public enum GemModifierTypes{
     recover("recover", "Aquamarine"),
     effect("effect", "Green"),
     durable("durable", "Black"),
-    speed("speed", "Gold");
+    speed("speed", "Gold"),
+    fireproof("fireproof", "bluePurple"),
+    explosionProof("explosionProof", "lightGreen");
     public String gemName;
     public String iconName;
 
